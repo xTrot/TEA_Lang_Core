@@ -49,7 +49,7 @@ public class Translator {
 	}
 
 	private static void printToFile(String resultLine) {
-		// TODO Auto-generated method stub
+		// TODO Actually print to a file.
 		System.out.println(resultLine);
 	}
 
