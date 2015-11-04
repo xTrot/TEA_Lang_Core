@@ -1,12 +1,22 @@
 package interpreter;
 
-public abstract class Keyword {
-	protected String value;
+public class Keyword {
+	private String key;
+	private String replaceTo;
 	
-	public Keyword(String keyword){
-		this.value = keyword;
+	public Keyword(String keyword,String replaceTo){
+		this.key = keyword;
+		this.replaceTo = replaceTo;
+		
 	}
 	
-	public abstract String replace(String containedHere);
+	@Override
+	public String toString(){
+		return key;
+	}
+	
+	public String replace(String containedHere){
+		return containedHere.replace(key, replaceTo);
+	};
 
 }

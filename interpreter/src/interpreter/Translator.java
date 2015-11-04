@@ -1,29 +1,56 @@
 package interpreter;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+
 public class Translator {
+	
 	// TODO Initialize Keyword Array
 	private static Keyword[] kwArray = {
-	    new Keyword("mainTerm") {
-		
-		@Override
-		public String replace(String containedHere) {
-			return containedHere.replace(value, "MainTerminal.get()");
-		}
-	}};
-
+	    new Keyword("mainTerm","MainTerminal.get()"),
+	    new Keyword("filter","Functions.filter"),
+	    new Keyword("print", "System.out.println")
+	    };
+	
+	private static final String LEXER_OUT= "../TEA_Lexer/lexer-output.txt";
+	private static final String TEST_FILE= "../TEA_Lexer/TestLexer.java";
+	private static final String TEA_IMPORT = "import lib_TEA.*";
+	
 	public static void main(String[] args) {
-		// TODO Add the import for lib_TEA.*
+		if(!CheckParserSuccess.check(LEXER_OUT)){
+			System.out.println("lexer-output.txt is missing or the syntax is incorrect.");
+			return;
+		}
 		
-		// TODO Find the start of main function.
+		File file = new File(TEST_FILE);
+		
+		// TODO Add the import for lib_TEA.*
+		printToFile(TEA_IMPORT);
 		
 		// TODO Line by line Find all keywords 
 		// and replace them with the lib_TEA 
 		// equivalent.
-
+		try(BufferedReader br = new BufferedReader(new FileReader(file))) {
+		    for(String line; (line = br.readLine()) != null; ) {
+		        String resultLine=line;
+		    	
+		        for(Keyword k:kwArray){
+		        	if(resultLine.contains(k.toString()))
+		        		resultLine=k.replace(line);
+		        }
+		        
+		    	printToFile(resultLine);
+		    }
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
 	}
-	
-	private static String getLine(){
-		return null;
+
+	private static void printToFile(String resultLine) {
+		// TODO Auto-generated method stub
+		System.out.println(resultLine);
 	}
 
 }
