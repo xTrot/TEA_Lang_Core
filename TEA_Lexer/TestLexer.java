@@ -53,7 +53,7 @@ public class test {
 
 				if (extensions.contains(ext)){
 					int i = extentions.indexOf(ext);
-					extCount.set(i, extCount.get(1) + 1);
+					extCount.set(i, extCount.get(i) + 1);
 				}
 				else {
 					extensions.add(ext);
