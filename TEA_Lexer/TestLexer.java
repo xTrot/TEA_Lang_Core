@@ -1,91 +1,76 @@
+import java.util.ArrayList;
+
 //Author Enddy Gonzalez Figueroa 
-
 // 
-
 // This program counts how many files for each extension, 
-
 //  are in a directory, for a linux environment. If the path  
-
 // is incorrect the path class will detect it and throw an  
-
 // exception. 
-
 // 
-
 // This is the first sample code for the Tea language. 
+public class test {
 
-public class test{
+	void main(String[] args) {
 
-void main(String[] args){ 
+		// Native Path class object instance.
+		Path dir = new Path(args[0]);
+		
+		// Native terminal start. Starts a new terminal communication.
+		mainTerm.start();
 
-//Native Path class object instance. 
+		// Simplified terminal command cd(Change Directory).
+		mainTerm.cd(dir);
 
-Path dir = new Path(args[0]); 
+		// Simple execution with a string argument. The execute
+		// waits for the terminal to finish the execution.
+		mainTerm.execute("ls");
 
-//Native terminal start. Starts a new terminal communication. 
+		// The response can be accessed.
+		String response = mainTerm.response();
 
-mainTerm.start(); 
+		// The filter method is able to use RegEx to find all
+		// the matching Strings
+		// This will match all files with extensions only.
+		String[] fileNames = filter(response, "(\\w.)+\\w");
 
-//Simplified terminal command cd(Change Directory).
+		// Counting process.
+		if (fileNames != null) {
 
-mainTerm.cd(dir); 
+			Path[] files = new Path[fileNames.length];
 
-// Simple execution with a string argument. The execute  
+			for (int i = 0; i < fileNames.length; i++)
+				files[i] = new Path(fileNames[i]);
 
-// waits for the terminal to finish the execution. 
+			ArrayList<String> extensions = new ArrayList<String>();
 
-mainTerm.execute("ls"); 
+			ArrayList<Integer> extCount = new ArrayList<Integer>();
 
-// The response can be accessed.  
+			for (Path file : files) {
 
-String response = mainTerm.response(); 
+				String ext = file.getExtension();
 
-// The filter method is able to use RegEx to find all  
+				ext = ext.lowerCase();
 
-// the matching Strings 
+				if (extensions.contains(ext)){
+					int i = extentions.indexOf(ext);
+					extCount.set(i, extCount.get(1) + 1);
+				}
+				else {
+					extensions.add(ext);
+					extCount.add(1);
+				}
 
-// This will match all files with extensions only. 
+			}
 
-String[] fileNames = filter(response,"(\\w.)+\\w"); 
+			for (String ext : extensions) {
 
-//Counting process. 
+				print(ext + ":" + extCount.get(extensions.indexOf(ext)));
 
-if(fileNames!=null){ 
+			}
 
-Path[] files = new Path[fileNames.length]; 
+		}
 
-for(int i=0;i<fileNames.length;i++) 
+		print("No matching files found.");
 
-files[i] = new Path(fileNames[i]);
-
-ArrayList<String> extensions = new ArrayList<String>(); 
-
-ArrayList<Integer> extCount = new ArrayList<Integer>(); 
-
-for(Path file:files){ 
-
-String ext = file.getExtension(); 
-
-ext = ext.lowerCase(); 
-
-if(extensions.contains(ext)) 
-extCount.get(extensions.getIndex(ext))+=1;
-else{ 
-extensions.add(ext);
-extCount.add(1);
-} 
-
-} 
-
-for(String ext:extensions){ 
-
-print(ext+":"+extCount.get(extensions.getIndex(ext))); 
-
-} 
-
-} 
-
-print("No matching files found."); 
-
-}
+	}
 }
