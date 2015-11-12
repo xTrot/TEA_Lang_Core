@@ -3,8 +3,11 @@ package interpreter;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
+import java.util.Formatter;
 
 public class Translator {
+	
+	private static Formatter newFile;
 	
 	// TODO Initialize Keyword Array
 	private static Keyword[] kwArray = {
@@ -25,6 +28,14 @@ public class Translator {
 		
 		File file = new File(TEST_FILE);
 		
+		try{
+			
+			newFile = new Formatter("../TEA_Lexer/IntermidiateCode.java");
+		
+		}  catch (Exception e) {
+			e.printStackTrace();
+		}
+		
 		// TODO Add the import for lib_TEA.*
 		printToFile(TEA_IMPORT);
 		
@@ -42,6 +53,9 @@ public class Translator {
 		        
 		    	printToFile(resultLine);
 		    }
+		    
+		    newFile.close();
+		    
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -51,6 +65,8 @@ public class Translator {
 	private static void printToFile(String resultLine) {
 		// TODO Actually print to a file.
 		System.out.println(resultLine);
+		newFile.format("%s", resultLine + "\n");
+		
 	}
 
 }
