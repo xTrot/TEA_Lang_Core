@@ -1,496 +1,538 @@
 Lexing [TestLexer.java]
-line:17 col:1 --public--PUBLIC--
-token: line 17, column 1, sym: 24
-line:17 col:8 --class--CLASS--
-token: line 17, column 8, sym: 34
-line:17 col:14 --test--IDENTIFIER--
-token: line 17, column 14, sym: 98, value: 'test'
-line:17 col:18 --{--LBRACE--
-token: line 17, column 18, sym: 16
-line:19 col:1 --void--VOID--
-token: line 19, column 1, sym: 37
-line:19 col:6 --main--IDENTIFIER--
-token: line 19, column 6, sym: 98, value: 'main'
-line:19 col:10 --(--LPAREN--
-token: line 19, column 10, sym: 19
-line:19 col:11 --String--IDENTIFIER--
-token: line 19, column 11, sym: 98, value: 'String'
-line:19 col:17 --[--LBRACK--
-token: line 19, column 17, sym: 10
-line:19 col:18 --]--RBRACK--
-token: line 19, column 18, sym: 11
-line:19 col:20 --args--IDENTIFIER--
-token: line 19, column 20, sym: 98, value: 'args'
-line:19 col:24 --)--RPAREN--
-token: line 19, column 24, sym: 20
-line:19 col:25 --{--LBRACE--
-token: line 19, column 25, sym: 16
-line:23 col:1 --Path--IDENTIFIER--
-token: line 23, column 1, sym: 98, value: 'Path'
-line:23 col:6 --dir--IDENTIFIER--
-token: line 23, column 6, sym: 98, value: 'dir'
-line:23 col:10 --=--EQ--
-token: line 23, column 10, sym: 18
-line:23 col:12 --new--NEW--
-token: line 23, column 12, sym: 57
-line:23 col:16 --Path--IDENTIFIER--
-token: line 23, column 16, sym: 98, value: 'Path'
-line:23 col:20 --(--LPAREN--
-token: line 23, column 20, sym: 19
-line:23 col:21 --args--IDENTIFIER--
-token: line 23, column 21, sym: 98, value: 'args'
-line:23 col:25 --[--LBRACK--
-token: line 23, column 25, sym: 10
-line:23 col:26 --0--INTEGER_LITERAL--
-token: line 23, column 26, sym: 93, value: '0'
-line:23 col:27 --]--RBRACK--
-token: line 23, column 27, sym: 11
-line:23 col:28 --)--RPAREN--
-token: line 23, column 28, sym: 20
-line:23 col:29 --;--SEMICOLON--
-token: line 23, column 29, sym: 13
-line:27 col:1 --mainTerm--IDENTIFIER--
-token: line 27, column 1, sym: 98, value: 'mainTerm'
-line:27 col:9 --.--DOT--
-token: line 27, column 9, sym: 12
-line:27 col:10 --start--IDENTIFIER--
-token: line 27, column 10, sym: 98, value: 'start'
-line:27 col:15 --(--LPAREN--
-token: line 27, column 15, sym: 19
-line:27 col:16 --)--RPAREN--
-token: line 27, column 16, sym: 20
-line:27 col:17 --;--SEMICOLON--
-token: line 27, column 17, sym: 13
-line:31 col:1 --mainTerm--IDENTIFIER--
-token: line 31, column 1, sym: 98, value: 'mainTerm'
-line:31 col:9 --.--DOT--
-token: line 31, column 9, sym: 12
-line:31 col:10 --cd--IDENTIFIER--
-token: line 31, column 10, sym: 98, value: 'cd'
-line:31 col:12 --(--LPAREN--
-token: line 31, column 12, sym: 19
-line:31 col:13 --dir--IDENTIFIER--
-token: line 31, column 13, sym: 98, value: 'dir'
-line:31 col:16 --)--RPAREN--
-token: line 31, column 16, sym: 20
-line:31 col:17 --;--SEMICOLON--
-token: line 31, column 17, sym: 13
-line:37 col:1 --mainTerm--IDENTIFIER--
-token: line 37, column 1, sym: 98, value: 'mainTerm'
-line:37 col:9 --.--DOT--
-token: line 37, column 9, sym: 12
-line:37 col:10 --execute--IDENTIFIER--
-token: line 37, column 10, sym: 98, value: 'execute'
-line:37 col:17 --(--LPAREN--
-token: line 37, column 17, sym: 19
-line:37 col:21 --"--STRING_LITERAL--
-token: line 37, column 21, sym: 97, value: 'ls'
-line:37 col:22 --)--RPAREN--
-token: line 37, column 22, sym: 20
-line:37 col:23 --;--SEMICOLON--
-token: line 37, column 23, sym: 13
-line:41 col:1 --String--IDENTIFIER--
-token: line 41, column 1, sym: 98, value: 'String'
-line:41 col:8 --response--IDENTIFIER--
-token: line 41, column 8, sym: 98, value: 'response'
-line:41 col:17 --=--EQ--
-token: line 41, column 17, sym: 18
-line:41 col:19 --mainTerm--IDENTIFIER--
-token: line 41, column 19, sym: 98, value: 'mainTerm'
-line:41 col:27 --.--DOT--
-token: line 41, column 27, sym: 12
-line:41 col:28 --response--IDENTIFIER--
-token: line 41, column 28, sym: 98, value: 'response'
-line:41 col:36 --(--LPAREN--
-token: line 41, column 36, sym: 19
-line:41 col:37 --)--RPAREN--
-token: line 41, column 37, sym: 20
-line:41 col:38 --;--SEMICOLON--
-token: line 41, column 38, sym: 13
-line:49 col:1 --String--IDENTIFIER--
-token: line 49, column 1, sym: 98, value: 'String'
-line:49 col:7 --[--LBRACK--
-token: line 49, column 7, sym: 10
-line:49 col:8 --]--RBRACK--
-token: line 49, column 8, sym: 11
-line:49 col:10 --fileNames--IDENTIFIER--
-token: line 49, column 10, sym: 98, value: 'fileNames'
-line:49 col:20 --=--EQ--
-token: line 49, column 20, sym: 18
-line:49 col:22 --filter--IDENTIFIER--
-token: line 49, column 22, sym: 98, value: 'filter'
-line:49 col:28 --(--LPAREN--
-token: line 49, column 28, sym: 19
-line:49 col:29 --response--IDENTIFIER--
-token: line 49, column 29, sym: 98, value: 'response'
-line:49 col:37 --,--COMMA--
-token: line 49, column 37, sym: 15
-line:49 col:49 --"--STRING_LITERAL--
-token: line 49, column 49, sym: 97, value: '(\w.)+\w'
-line:49 col:50 --)--RPAREN--
-token: line 49, column 50, sym: 20
-line:49 col:51 --;--SEMICOLON--
-token: line 49, column 51, sym: 13
-line:53 col:1 --if--IF--
-token: line 53, column 1, sym: 42
-line:53 col:3 --(--LPAREN--
-token: line 53, column 3, sym: 19
-line:53 col:4 --fileNames--IDENTIFIER--
-token: line 53, column 4, sym: 98, value: 'fileNames'
-line:53 col:13 --!=--NOTEQ--
-token: line 53, column 13, sym: 75
-line:53 col:15 --null--NULL_LITERAL--
-token: line 53, column 15, sym: 99
-line:53 col:19 --)--RPAREN--
-token: line 53, column 19, sym: 20
-line:53 col:20 --{--LBRACE--
-token: line 53, column 20, sym: 16
-line:55 col:1 --Path--IDENTIFIER--
-token: line 55, column 1, sym: 98, value: 'Path'
-line:55 col:5 --[--LBRACK--
-token: line 55, column 5, sym: 10
-line:55 col:6 --]--RBRACK--
-token: line 55, column 6, sym: 11
-line:55 col:8 --files--IDENTIFIER--
-token: line 55, column 8, sym: 98, value: 'files'
-line:55 col:14 --=--EQ--
-token: line 55, column 14, sym: 18
-line:55 col:16 --new--NEW--
-token: line 55, column 16, sym: 57
-line:55 col:20 --Path--IDENTIFIER--
-token: line 55, column 20, sym: 98, value: 'Path'
-line:55 col:24 --[--LBRACK--
-token: line 55, column 24, sym: 10
-line:55 col:25 --fileNames--IDENTIFIER--
-token: line 55, column 25, sym: 98, value: 'fileNames'
-line:55 col:34 --.--DOT--
-token: line 55, column 34, sym: 12
-line:55 col:35 --length--IDENTIFIER--
-token: line 55, column 35, sym: 98, value: 'length'
-line:55 col:41 --]--RBRACK--
-token: line 55, column 41, sym: 11
-line:55 col:42 --;--SEMICOLON--
-token: line 55, column 42, sym: 13
-line:57 col:1 --for--FOR--
-token: line 57, column 1, sym: 49
-line:57 col:4 --(--LPAREN--
-token: line 57, column 4, sym: 19
-line:57 col:5 --int--INT--
-token: line 57, column 5, sym: 5
-line:57 col:9 --i--IDENTIFIER--
-token: line 57, column 9, sym: 98, value: 'i'
-line:57 col:10 --=--EQ--
-token: line 57, column 10, sym: 18
-line:57 col:11 --0--INTEGER_LITERAL--
-token: line 57, column 11, sym: 93, value: '0'
-line:57 col:12 --;--SEMICOLON--
-token: line 57, column 12, sym: 13
-line:57 col:13 --i--IDENTIFIER--
-token: line 57, column 13, sym: 98, value: 'i'
-line:57 col:14 --<--LT--
-token: line 57, column 14, sym: 69
-line:57 col:15 --fileNames--IDENTIFIER--
-token: line 57, column 15, sym: 98, value: 'fileNames'
-line:57 col:24 --.--DOT--
-token: line 57, column 24, sym: 12
-line:57 col:25 --length--IDENTIFIER--
-token: line 57, column 25, sym: 98, value: 'length'
-line:57 col:31 --;--SEMICOLON--
-token: line 57, column 31, sym: 13
-line:57 col:32 --i--IDENTIFIER--
-token: line 57, column 32, sym: 98, value: 'i'
-line:57 col:33 --++--PLUSPLUS--
-token: line 57, column 33, sym: 58
-line:57 col:35 --)--RPAREN--
-token: line 57, column 35, sym: 20
-line:59 col:1 --files--IDENTIFIER--
-token: line 59, column 1, sym: 98, value: 'files'
-line:59 col:6 --[--LBRACK--
-token: line 59, column 6, sym: 10
-line:59 col:7 --i--IDENTIFIER--
-token: line 59, column 7, sym: 98, value: 'i'
-line:59 col:8 --]--RBRACK--
-token: line 59, column 8, sym: 11
-line:59 col:10 --=--EQ--
-token: line 59, column 10, sym: 18
-line:59 col:12 --new--NEW--
-token: line 59, column 12, sym: 57
-line:59 col:16 --Path--IDENTIFIER--
-token: line 59, column 16, sym: 98, value: 'Path'
+line:1 col:1 --import--IMPORT--
+token: line 1, column 1, sym: 23
+line:1 col:8 --java--IDENTIFIER--
+token: line 1, column 8, sym: 98, value: 'java'
+line:1 col:12 --.--DOT--
+token: line 1, column 12, sym: 12
+line:1 col:13 --util--IDENTIFIER--
+token: line 1, column 13, sym: 98, value: 'util'
+line:1 col:17 --.--DOT--
+token: line 1, column 17, sym: 12
+line:1 col:18 --ArrayList--IDENTIFIER--
+token: line 1, column 18, sym: 98, value: 'ArrayList'
+line:1 col:27 --;--SEMICOLON--
+token: line 1, column 27, sym: 13
+line:11 col:1 --public--PUBLIC--
+token: line 11, column 1, sym: 24
+line:11 col:8 --class--CLASS--
+token: line 11, column 8, sym: 34
+line:11 col:14 --test--IDENTIFIER--
+token: line 11, column 14, sym: 98, value: 'test'
+line:11 col:19 --{--LBRACE--
+token: line 11, column 19, sym: 16
+line:13 col:2 --void--VOID--
+token: line 13, column 2, sym: 37
+line:13 col:7 --main--IDENTIFIER--
+token: line 13, column 7, sym: 98, value: 'main'
+line:13 col:11 --(--LPAREN--
+token: line 13, column 11, sym: 19
+line:13 col:12 --String--IDENTIFIER--
+token: line 13, column 12, sym: 98, value: 'String'
+line:13 col:18 --[--LBRACK--
+token: line 13, column 18, sym: 10
+line:13 col:19 --]--RBRACK--
+token: line 13, column 19, sym: 11
+line:13 col:21 --args--IDENTIFIER--
+token: line 13, column 21, sym: 98, value: 'args'
+line:13 col:25 --)--RPAREN--
+token: line 13, column 25, sym: 20
+line:13 col:27 --{--LBRACE--
+token: line 13, column 27, sym: 16
+line:16 col:3 --Path--IDENTIFIER--
+token: line 16, column 3, sym: 98, value: 'Path'
+line:16 col:8 --dir--IDENTIFIER--
+token: line 16, column 8, sym: 98, value: 'dir'
+line:16 col:12 --=--EQ--
+token: line 16, column 12, sym: 18
+line:16 col:14 --new--NEW--
+token: line 16, column 14, sym: 57
+line:16 col:18 --Path--IDENTIFIER--
+token: line 16, column 18, sym: 98, value: 'Path'
+line:16 col:22 --(--LPAREN--
+token: line 16, column 22, sym: 19
+line:16 col:23 --args--IDENTIFIER--
+token: line 16, column 23, sym: 98, value: 'args'
+line:16 col:27 --[--LBRACK--
+token: line 16, column 27, sym: 10
+line:16 col:28 --0--INTEGER_LITERAL--
+token: line 16, column 28, sym: 93, value: '0'
+line:16 col:29 --]--RBRACK--
+token: line 16, column 29, sym: 11
+line:16 col:30 --)--RPAREN--
+token: line 16, column 30, sym: 20
+line:16 col:31 --;--SEMICOLON--
+token: line 16, column 31, sym: 13
+line:19 col:3 --mainTerm--IDENTIFIER--
+token: line 19, column 3, sym: 98, value: 'mainTerm'
+line:19 col:11 --.--DOT--
+token: line 19, column 11, sym: 12
+line:19 col:12 --start--IDENTIFIER--
+token: line 19, column 12, sym: 98, value: 'start'
+line:19 col:17 --(--LPAREN--
+token: line 19, column 17, sym: 19
+line:19 col:18 --)--RPAREN--
+token: line 19, column 18, sym: 20
+line:19 col:19 --;--SEMICOLON--
+token: line 19, column 19, sym: 13
+line:22 col:3 --mainTerm--IDENTIFIER--
+token: line 22, column 3, sym: 98, value: 'mainTerm'
+line:22 col:11 --.--DOT--
+token: line 22, column 11, sym: 12
+line:22 col:12 --cd--IDENTIFIER--
+token: line 22, column 12, sym: 98, value: 'cd'
+line:22 col:14 --(--LPAREN--
+token: line 22, column 14, sym: 19
+line:22 col:15 --dir--IDENTIFIER--
+token: line 22, column 15, sym: 98, value: 'dir'
+line:22 col:18 --)--RPAREN--
+token: line 22, column 18, sym: 20
+line:22 col:19 --;--SEMICOLON--
+token: line 22, column 19, sym: 13
+line:26 col:3 --mainTerm--IDENTIFIER--
+token: line 26, column 3, sym: 98, value: 'mainTerm'
+line:26 col:11 --.--DOT--
+token: line 26, column 11, sym: 12
+line:26 col:12 --execute--IDENTIFIER--
+token: line 26, column 12, sym: 98, value: 'execute'
+line:26 col:19 --(--LPAREN--
+token: line 26, column 19, sym: 19
+line:26 col:23 --"--STRING_LITERAL--
+token: line 26, column 23, sym: 97, value: 'ls'
+line:26 col:24 --)--RPAREN--
+token: line 26, column 24, sym: 20
+line:26 col:25 --;--SEMICOLON--
+token: line 26, column 25, sym: 13
+line:29 col:3 --String--IDENTIFIER--
+token: line 29, column 3, sym: 98, value: 'String'
+line:29 col:10 --response--IDENTIFIER--
+token: line 29, column 10, sym: 98, value: 'response'
+line:29 col:19 --=--EQ--
+token: line 29, column 19, sym: 18
+line:29 col:21 --mainTerm--IDENTIFIER--
+token: line 29, column 21, sym: 98, value: 'mainTerm'
+line:29 col:29 --.--DOT--
+token: line 29, column 29, sym: 12
+line:29 col:30 --response--IDENTIFIER--
+token: line 29, column 30, sym: 98, value: 'response'
+line:29 col:38 --(--LPAREN--
+token: line 29, column 38, sym: 19
+line:29 col:39 --)--RPAREN--
+token: line 29, column 39, sym: 20
+line:29 col:40 --;--SEMICOLON--
+token: line 29, column 40, sym: 13
+line:34 col:3 --String--IDENTIFIER--
+token: line 34, column 3, sym: 98, value: 'String'
+line:34 col:9 --[--LBRACK--
+token: line 34, column 9, sym: 10
+line:34 col:10 --]--RBRACK--
+token: line 34, column 10, sym: 11
+line:34 col:12 --fileNames--IDENTIFIER--
+token: line 34, column 12, sym: 98, value: 'fileNames'
+line:34 col:22 --=--EQ--
+token: line 34, column 22, sym: 18
+line:34 col:24 --filter--IDENTIFIER--
+token: line 34, column 24, sym: 98, value: 'filter'
+line:34 col:30 --(--LPAREN--
+token: line 34, column 30, sym: 19
+line:34 col:31 --response--IDENTIFIER--
+token: line 34, column 31, sym: 98, value: 'response'
+line:34 col:39 --,--COMMA--
+token: line 34, column 39, sym: 15
+line:34 col:52 --"--STRING_LITERAL--
+token: line 34, column 52, sym: 97, value: '(\w.)+\w'
+line:34 col:53 --)--RPAREN--
+token: line 34, column 53, sym: 20
+line:34 col:54 --;--SEMICOLON--
+token: line 34, column 54, sym: 13
+line:37 col:3 --if--IF--
+token: line 37, column 3, sym: 42
+line:37 col:6 --(--LPAREN--
+token: line 37, column 6, sym: 19
+line:37 col:7 --fileNames--IDENTIFIER--
+token: line 37, column 7, sym: 98, value: 'fileNames'
+line:37 col:17 --!=--NOTEQ--
+token: line 37, column 17, sym: 75
+line:37 col:20 --null--NULL_LITERAL--
+token: line 37, column 20, sym: 99
+line:37 col:24 --)--RPAREN--
+token: line 37, column 24, sym: 20
+line:37 col:26 --{--LBRACE--
+token: line 37, column 26, sym: 16
+line:39 col:4 --Path--IDENTIFIER--
+token: line 39, column 4, sym: 98, value: 'Path'
+line:39 col:8 --[--LBRACK--
+token: line 39, column 8, sym: 10
+line:39 col:9 --]--RBRACK--
+token: line 39, column 9, sym: 11
+line:39 col:11 --files--IDENTIFIER--
+token: line 39, column 11, sym: 98, value: 'files'
+line:39 col:17 --=--EQ--
+token: line 39, column 17, sym: 18
+line:39 col:19 --new--NEW--
+token: line 39, column 19, sym: 57
+line:39 col:23 --Path--IDENTIFIER--
+token: line 39, column 23, sym: 98, value: 'Path'
+line:39 col:27 --[--LBRACK--
+token: line 39, column 27, sym: 10
+line:39 col:28 --fileNames--IDENTIFIER--
+token: line 39, column 28, sym: 98, value: 'fileNames'
+line:39 col:37 --.--DOT--
+token: line 39, column 37, sym: 12
+line:39 col:38 --length--IDENTIFIER--
+token: line 39, column 38, sym: 98, value: 'length'
+line:39 col:44 --]--RBRACK--
+token: line 39, column 44, sym: 11
+line:39 col:45 --;--SEMICOLON--
+token: line 39, column 45, sym: 13
+line:41 col:4 --for--FOR--
+token: line 41, column 4, sym: 49
+line:41 col:8 --(--LPAREN--
+token: line 41, column 8, sym: 19
+line:41 col:9 --int--INT--
+token: line 41, column 9, sym: 5
+line:41 col:13 --i--IDENTIFIER--
+token: line 41, column 13, sym: 98, value: 'i'
+line:41 col:15 --=--EQ--
+token: line 41, column 15, sym: 18
+line:41 col:17 --0--INTEGER_LITERAL--
+token: line 41, column 17, sym: 93, value: '0'
+line:41 col:18 --;--SEMICOLON--
+token: line 41, column 18, sym: 13
+line:41 col:20 --i--IDENTIFIER--
+token: line 41, column 20, sym: 98, value: 'i'
+line:41 col:22 --<--LT--
+token: line 41, column 22, sym: 69
+line:41 col:24 --fileNames--IDENTIFIER--
+token: line 41, column 24, sym: 98, value: 'fileNames'
+line:41 col:33 --.--DOT--
+token: line 41, column 33, sym: 12
+line:41 col:34 --length--IDENTIFIER--
+token: line 41, column 34, sym: 98, value: 'length'
+line:41 col:40 --;--SEMICOLON--
+token: line 41, column 40, sym: 13
+line:41 col:42 --i--IDENTIFIER--
+token: line 41, column 42, sym: 98, value: 'i'
+line:41 col:43 --++--PLUSPLUS--
+token: line 41, column 43, sym: 58
+line:41 col:45 --)--RPAREN--
+token: line 41, column 45, sym: 20
+line:42 col:5 --files--IDENTIFIER--
+token: line 42, column 5, sym: 98, value: 'files'
+line:42 col:10 --[--LBRACK--
+token: line 42, column 10, sym: 10
+line:42 col:11 --i--IDENTIFIER--
+token: line 42, column 11, sym: 98, value: 'i'
+line:42 col:12 --]--RBRACK--
+token: line 42, column 12, sym: 11
+line:42 col:14 --=--EQ--
+token: line 42, column 14, sym: 18
+line:42 col:16 --new--NEW--
+token: line 42, column 16, sym: 57
+line:42 col:20 --Path--IDENTIFIER--
+token: line 42, column 20, sym: 98, value: 'Path'
+line:42 col:24 --(--LPAREN--
+token: line 42, column 24, sym: 19
+line:42 col:25 --fileNames--IDENTIFIER--
+token: line 42, column 25, sym: 98, value: 'fileNames'
+line:42 col:34 --[--LBRACK--
+token: line 42, column 34, sym: 10
+line:42 col:35 --i--IDENTIFIER--
+token: line 42, column 35, sym: 98, value: 'i'
+line:42 col:36 --]--RBRACK--
+token: line 42, column 36, sym: 11
+line:42 col:37 --)--RPAREN--
+token: line 42, column 37, sym: 20
+line:42 col:38 --;--SEMICOLON--
+token: line 42, column 38, sym: 13
+line:44 col:4 --ArrayList--IDENTIFIER--
+token: line 44, column 4, sym: 98, value: 'ArrayList'
+line:44 col:13 --<--LT--
+token: line 44, column 13, sym: 69
+line:44 col:14 --String--IDENTIFIER--
+token: line 44, column 14, sym: 98, value: 'String'
+line:44 col:20 -->--GT--
+token: line 44, column 20, sym: 70
+line:44 col:22 --extensions--IDENTIFIER--
+token: line 44, column 22, sym: 98, value: 'extensions'
+line:44 col:33 --=--EQ--
+token: line 44, column 33, sym: 18
+line:44 col:35 --new--NEW--
+token: line 44, column 35, sym: 57
+line:44 col:39 --ArrayList--IDENTIFIER--
+token: line 44, column 39, sym: 98, value: 'ArrayList'
+line:44 col:48 --<--LT--
+token: line 44, column 48, sym: 69
+line:44 col:49 --String--IDENTIFIER--
+token: line 44, column 49, sym: 98, value: 'String'
+line:44 col:55 -->--GT--
+token: line 44, column 55, sym: 70
+line:44 col:56 --(--LPAREN--
+token: line 44, column 56, sym: 19
+line:44 col:57 --)--RPAREN--
+token: line 44, column 57, sym: 20
+line:44 col:58 --;--SEMICOLON--
+token: line 44, column 58, sym: 13
+line:46 col:4 --ArrayList--IDENTIFIER--
+token: line 46, column 4, sym: 98, value: 'ArrayList'
+line:46 col:13 --<--LT--
+token: line 46, column 13, sym: 69
+line:46 col:14 --Integer--IDENTIFIER--
+token: line 46, column 14, sym: 98, value: 'Integer'
+line:46 col:21 -->--GT--
+token: line 46, column 21, sym: 70
+line:46 col:23 --extCount--IDENTIFIER--
+token: line 46, column 23, sym: 98, value: 'extCount'
+line:46 col:32 --=--EQ--
+token: line 46, column 32, sym: 18
+line:46 col:34 --new--NEW--
+token: line 46, column 34, sym: 57
+line:46 col:38 --ArrayList--IDENTIFIER--
+token: line 46, column 38, sym: 98, value: 'ArrayList'
+line:46 col:47 --<--LT--
+token: line 46, column 47, sym: 69
+line:46 col:48 --Integer--IDENTIFIER--
+token: line 46, column 48, sym: 98, value: 'Integer'
+line:46 col:55 -->--GT--
+token: line 46, column 55, sym: 70
+line:46 col:56 --(--LPAREN--
+token: line 46, column 56, sym: 19
+line:46 col:57 --)--RPAREN--
+token: line 46, column 57, sym: 20
+line:46 col:58 --;--SEMICOLON--
+token: line 46, column 58, sym: 13
+line:48 col:4 --for--FOR--
+token: line 48, column 4, sym: 49
+line:48 col:8 --(--LPAREN--
+token: line 48, column 8, sym: 19
+line:48 col:9 --Path--IDENTIFIER--
+token: line 48, column 9, sym: 98, value: 'Path'
+line:48 col:14 --file--IDENTIFIER--
+token: line 48, column 14, sym: 98, value: 'file'
+line:48 col:19 --:--COLON--
+token: line 48, column 19, sym: 21
+line:48 col:21 --files--IDENTIFIER--
+token: line 48, column 21, sym: 98, value: 'files'
+line:48 col:26 --)--RPAREN--
+token: line 48, column 26, sym: 20
+line:48 col:28 --{--LBRACE--
+token: line 48, column 28, sym: 16
+line:50 col:5 --String--IDENTIFIER--
+token: line 50, column 5, sym: 98, value: 'String'
+line:50 col:12 --ext--IDENTIFIER--
+token: line 50, column 12, sym: 98, value: 'ext'
+line:50 col:16 --=--EQ--
+token: line 50, column 16, sym: 18
+line:50 col:18 --file--IDENTIFIER--
+token: line 50, column 18, sym: 98, value: 'file'
+line:50 col:22 --.--DOT--
+token: line 50, column 22, sym: 12
+line:50 col:23 --getExtension--IDENTIFIER--
+token: line 50, column 23, sym: 98, value: 'getExtension'
+line:50 col:35 --(--LPAREN--
+token: line 50, column 35, sym: 19
+line:50 col:36 --)--RPAREN--
+token: line 50, column 36, sym: 20
+line:50 col:37 --;--SEMICOLON--
+token: line 50, column 37, sym: 13
+line:52 col:5 --ext--IDENTIFIER--
+token: line 52, column 5, sym: 98, value: 'ext'
+line:52 col:9 --=--EQ--
+token: line 52, column 9, sym: 18
+line:52 col:11 --ext--IDENTIFIER--
+token: line 52, column 11, sym: 98, value: 'ext'
+line:52 col:14 --.--DOT--
+token: line 52, column 14, sym: 12
+line:52 col:15 --lowerCase--IDENTIFIER--
+token: line 52, column 15, sym: 98, value: 'lowerCase'
+line:52 col:24 --(--LPAREN--
+token: line 52, column 24, sym: 19
+line:52 col:25 --)--RPAREN--
+token: line 52, column 25, sym: 20
+line:52 col:26 --;--SEMICOLON--
+token: line 52, column 26, sym: 13
+line:54 col:5 --if--IF--
+token: line 54, column 5, sym: 42
+line:54 col:8 --(--LPAREN--
+token: line 54, column 8, sym: 19
+line:54 col:9 --extensions--IDENTIFIER--
+token: line 54, column 9, sym: 98, value: 'extensions'
+line:54 col:19 --.--DOT--
+token: line 54, column 19, sym: 12
+line:54 col:20 --contains--IDENTIFIER--
+token: line 54, column 20, sym: 98, value: 'contains'
+line:54 col:28 --(--LPAREN--
+token: line 54, column 28, sym: 19
+line:54 col:29 --ext--IDENTIFIER--
+token: line 54, column 29, sym: 98, value: 'ext'
+line:54 col:32 --)--RPAREN--
+token: line 54, column 32, sym: 20
+line:54 col:33 --)--RPAREN--
+token: line 54, column 33, sym: 20
+line:54 col:34 --{--LBRACE--
+token: line 54, column 34, sym: 16
+line:55 col:6 --int--INT--
+token: line 55, column 6, sym: 5
+line:55 col:10 --i--IDENTIFIER--
+token: line 55, column 10, sym: 98, value: 'i'
+line:55 col:12 --=--EQ--
+token: line 55, column 12, sym: 18
+line:55 col:14 --extentions--IDENTIFIER--
+token: line 55, column 14, sym: 98, value: 'extentions'
+line:55 col:24 --.--DOT--
+token: line 55, column 24, sym: 12
+line:55 col:25 --indexOf--IDENTIFIER--
+token: line 55, column 25, sym: 98, value: 'indexOf'
+line:55 col:32 --(--LPAREN--
+token: line 55, column 32, sym: 19
+line:55 col:33 --ext--IDENTIFIER--
+token: line 55, column 33, sym: 98, value: 'ext'
+line:55 col:36 --)--RPAREN--
+token: line 55, column 36, sym: 20
+line:55 col:37 --;--SEMICOLON--
+token: line 55, column 37, sym: 13
+line:56 col:6 --extCount--IDENTIFIER--
+token: line 56, column 6, sym: 98, value: 'extCount'
+line:56 col:14 --.--DOT--
+token: line 56, column 14, sym: 12
+line:56 col:15 --set--IDENTIFIER--
+token: line 56, column 15, sym: 98, value: 'set'
+line:56 col:18 --(--LPAREN--
+token: line 56, column 18, sym: 19
+line:56 col:19 --i--IDENTIFIER--
+token: line 56, column 19, sym: 98, value: 'i'
+line:56 col:20 --,--COMMA--
+token: line 56, column 20, sym: 15
+line:56 col:22 --extCount--IDENTIFIER--
+token: line 56, column 22, sym: 98, value: 'extCount'
+line:56 col:30 --.--DOT--
+token: line 56, column 30, sym: 12
+line:56 col:31 --get--IDENTIFIER--
+token: line 56, column 31, sym: 98, value: 'get'
+line:56 col:34 --(--LPAREN--
+token: line 56, column 34, sym: 19
+line:56 col:35 --i--IDENTIFIER--
+token: line 56, column 35, sym: 98, value: 'i'
+line:56 col:36 --)--RPAREN--
+token: line 56, column 36, sym: 20
+line:56 col:38 --+--PLUS--
+token: line 56, column 38, sym: 60
+line:56 col:40 --1--INTEGER_LITERAL--
+token: line 56, column 40, sym: 93, value: '1'
+line:56 col:41 --)--RPAREN--
+token: line 56, column 41, sym: 20
+line:56 col:42 --;--SEMICOLON--
+token: line 56, column 42, sym: 13
+line:57 col:5 --}--RBRACE--
+token: line 57, column 5, sym: 17
+line:58 col:5 --else--ELSE--
+token: line 58, column 5, sym: 43
+line:58 col:10 --{--LBRACE--
+token: line 58, column 10, sym: 16
+line:59 col:6 --extensions--IDENTIFIER--
+token: line 59, column 6, sym: 98, value: 'extensions'
+line:59 col:16 --.--DOT--
+token: line 59, column 16, sym: 12
+line:59 col:17 --add--IDENTIFIER--
+token: line 59, column 17, sym: 98, value: 'add'
 line:59 col:20 --(--LPAREN--
 token: line 59, column 20, sym: 19
-line:59 col:21 --fileNames--IDENTIFIER--
-token: line 59, column 21, sym: 98, value: 'fileNames'
-line:59 col:30 --[--LBRACK--
-token: line 59, column 30, sym: 10
-line:59 col:31 --i--IDENTIFIER--
-token: line 59, column 31, sym: 98, value: 'i'
-line:59 col:32 --]--RBRACK--
-token: line 59, column 32, sym: 11
-line:59 col:33 --)--RPAREN--
-token: line 59, column 33, sym: 20
-line:59 col:34 --;--SEMICOLON--
-token: line 59, column 34, sym: 13
-line:61 col:1 --ArrayList--IDENTIFIER--
-token: line 61, column 1, sym: 98, value: 'ArrayList'
-line:61 col:10 --<--LT--
-token: line 61, column 10, sym: 69
-line:61 col:11 --String--IDENTIFIER--
-token: line 61, column 11, sym: 98, value: 'String'
-line:61 col:17 -->--GT--
-token: line 61, column 17, sym: 70
-line:61 col:19 --extensions--IDENTIFIER--
-token: line 61, column 19, sym: 98, value: 'extensions'
-line:61 col:30 --=--EQ--
-token: line 61, column 30, sym: 18
-line:61 col:32 --new--NEW--
-token: line 61, column 32, sym: 57
-line:61 col:36 --ArrayList--IDENTIFIER--
-token: line 61, column 36, sym: 98, value: 'ArrayList'
-line:61 col:45 --<--LT--
-token: line 61, column 45, sym: 69
-line:61 col:46 --String--IDENTIFIER--
-token: line 61, column 46, sym: 98, value: 'String'
-line:61 col:52 -->--GT--
-token: line 61, column 52, sym: 70
-line:61 col:53 --(--LPAREN--
-token: line 61, column 53, sym: 19
-line:61 col:54 --)--RPAREN--
-token: line 61, column 54, sym: 20
-line:61 col:55 --;--SEMICOLON--
-token: line 61, column 55, sym: 13
-line:63 col:1 --ArrayList--IDENTIFIER--
-token: line 63, column 1, sym: 98, value: 'ArrayList'
-line:63 col:10 --<--LT--
-token: line 63, column 10, sym: 69
-line:63 col:11 --Integer--IDENTIFIER--
-token: line 63, column 11, sym: 98, value: 'Integer'
-line:63 col:18 -->--GT--
-token: line 63, column 18, sym: 70
-line:63 col:20 --extCount--IDENTIFIER--
-token: line 63, column 20, sym: 98, value: 'extCount'
-line:63 col:29 --=--EQ--
-token: line 63, column 29, sym: 18
-line:63 col:31 --new--NEW--
-token: line 63, column 31, sym: 57
-line:63 col:35 --ArrayList--IDENTIFIER--
-token: line 63, column 35, sym: 98, value: 'ArrayList'
-line:63 col:44 --<--LT--
-token: line 63, column 44, sym: 69
-line:63 col:45 --Integer--IDENTIFIER--
-token: line 63, column 45, sym: 98, value: 'Integer'
-line:63 col:52 -->--GT--
-token: line 63, column 52, sym: 70
-line:63 col:53 --(--LPAREN--
-token: line 63, column 53, sym: 19
-line:63 col:54 --)--RPAREN--
-token: line 63, column 54, sym: 20
-line:63 col:55 --;--SEMICOLON--
-token: line 63, column 55, sym: 13
-line:65 col:1 --for--FOR--
-token: line 65, column 1, sym: 49
-line:65 col:4 --(--LPAREN--
-token: line 65, column 4, sym: 19
-line:65 col:5 --Path--IDENTIFIER--
-token: line 65, column 5, sym: 98, value: 'Path'
-line:65 col:10 --file--IDENTIFIER--
-token: line 65, column 10, sym: 98, value: 'file'
-line:65 col:14 --:--COLON--
-token: line 65, column 14, sym: 21
-line:65 col:15 --files--IDENTIFIER--
-token: line 65, column 15, sym: 98, value: 'files'
-line:65 col:20 --)--RPAREN--
-token: line 65, column 20, sym: 20
-line:65 col:21 --{--LBRACE--
-token: line 65, column 21, sym: 16
-line:67 col:1 --String--IDENTIFIER--
-token: line 67, column 1, sym: 98, value: 'String'
-line:67 col:8 --ext--IDENTIFIER--
-token: line 67, column 8, sym: 98, value: 'ext'
-line:67 col:12 --=--EQ--
-token: line 67, column 12, sym: 18
-line:67 col:14 --file--IDENTIFIER--
-token: line 67, column 14, sym: 98, value: 'file'
-line:67 col:18 --.--DOT--
-token: line 67, column 18, sym: 12
-line:67 col:19 --getExtension--IDENTIFIER--
-token: line 67, column 19, sym: 98, value: 'getExtension'
-line:67 col:31 --(--LPAREN--
-token: line 67, column 31, sym: 19
-line:67 col:32 --)--RPAREN--
-token: line 67, column 32, sym: 20
-line:67 col:33 --;--SEMICOLON--
-token: line 67, column 33, sym: 13
-line:69 col:1 --ext--IDENTIFIER--
-token: line 69, column 1, sym: 98, value: 'ext'
-line:69 col:5 --=--EQ--
-token: line 69, column 5, sym: 18
-line:69 col:7 --ext--IDENTIFIER--
-token: line 69, column 7, sym: 98, value: 'ext'
-line:69 col:10 --.--DOT--
-token: line 69, column 10, sym: 12
-line:69 col:11 --lowerCase--IDENTIFIER--
-token: line 69, column 11, sym: 98, value: 'lowerCase'
-line:69 col:20 --(--LPAREN--
-token: line 69, column 20, sym: 19
-line:69 col:21 --)--RPAREN--
-token: line 69, column 21, sym: 20
-line:69 col:22 --;--SEMICOLON--
-token: line 69, column 22, sym: 13
-line:71 col:1 --if--IF--
-token: line 71, column 1, sym: 42
-line:71 col:3 --(--LPAREN--
-token: line 71, column 3, sym: 19
-line:71 col:4 --extensions--IDENTIFIER--
-token: line 71, column 4, sym: 98, value: 'extensions'
-line:71 col:14 --.--DOT--
-token: line 71, column 14, sym: 12
-line:71 col:15 --contains--IDENTIFIER--
-token: line 71, column 15, sym: 98, value: 'contains'
-line:71 col:23 --(--LPAREN--
-token: line 71, column 23, sym: 19
-line:71 col:24 --ext--IDENTIFIER--
-token: line 71, column 24, sym: 98, value: 'ext'
-line:71 col:27 --)--RPAREN--
-token: line 71, column 27, sym: 20
-line:71 col:28 --)--RPAREN--
-token: line 71, column 28, sym: 20
-line:72 col:1 --extCount--IDENTIFIER--
-token: line 72, column 1, sym: 98, value: 'extCount'
-line:72 col:9 --.--DOT--
-token: line 72, column 9, sym: 12
-line:72 col:10 --get--IDENTIFIER--
-token: line 72, column 10, sym: 98, value: 'get'
-line:72 col:13 --(--LPAREN--
-token: line 72, column 13, sym: 19
-line:72 col:14 --extensions--IDENTIFIER--
-token: line 72, column 14, sym: 98, value: 'extensions'
-line:72 col:24 --.--DOT--
-token: line 72, column 24, sym: 12
-line:72 col:25 --getIndex--IDENTIFIER--
-token: line 72, column 25, sym: 98, value: 'getIndex'
-line:72 col:33 --(--LPAREN--
-token: line 72, column 33, sym: 19
-line:72 col:34 --ext--IDENTIFIER--
-token: line 72, column 34, sym: 98, value: 'ext'
-line:72 col:37 --)--RPAREN--
-token: line 72, column 37, sym: 20
-line:72 col:38 --)--RPAREN--
-token: line 72, column 38, sym: 20
-line:72 col:39 --+=--PLUSEQ--
-token: line 72, column 39, sym: 85
-line:72 col:41 --1--INTEGER_LITERAL--
-token: line 72, column 41, sym: 93, value: '1'
-line:72 col:42 --;--SEMICOLON--
-token: line 72, column 42, sym: 13
-line:73 col:1 --else--ELSE--
-token: line 73, column 1, sym: 43
-line:73 col:5 --{--LBRACE--
-token: line 73, column 5, sym: 16
-line:74 col:1 --extensions--IDENTIFIER--
-token: line 74, column 1, sym: 98, value: 'extensions'
-line:74 col:11 --.--DOT--
-token: line 74, column 11, sym: 12
-line:74 col:12 --add--IDENTIFIER--
-token: line 74, column 12, sym: 98, value: 'add'
-line:74 col:15 --(--LPAREN--
-token: line 74, column 15, sym: 19
-line:74 col:16 --ext--IDENTIFIER--
-token: line 74, column 16, sym: 98, value: 'ext'
-line:74 col:19 --)--RPAREN--
-token: line 74, column 19, sym: 20
-line:74 col:20 --;--SEMICOLON--
-token: line 74, column 20, sym: 13
-line:75 col:1 --extCount--IDENTIFIER--
-token: line 75, column 1, sym: 98, value: 'extCount'
-line:75 col:9 --.--DOT--
-token: line 75, column 9, sym: 12
-line:75 col:10 --add--IDENTIFIER--
-token: line 75, column 10, sym: 98, value: 'add'
-line:75 col:13 --(--LPAREN--
-token: line 75, column 13, sym: 19
-line:75 col:14 --1--INTEGER_LITERAL--
-token: line 75, column 14, sym: 93, value: '1'
-line:75 col:15 --)--RPAREN--
-token: line 75, column 15, sym: 20
-line:75 col:16 --;--SEMICOLON--
-token: line 75, column 16, sym: 13
+line:59 col:21 --ext--IDENTIFIER--
+token: line 59, column 21, sym: 98, value: 'ext'
+line:59 col:24 --)--RPAREN--
+token: line 59, column 24, sym: 20
+line:59 col:25 --;--SEMICOLON--
+token: line 59, column 25, sym: 13
+line:60 col:6 --extCount--IDENTIFIER--
+token: line 60, column 6, sym: 98, value: 'extCount'
+line:60 col:14 --.--DOT--
+token: line 60, column 14, sym: 12
+line:60 col:15 --add--IDENTIFIER--
+token: line 60, column 15, sym: 98, value: 'add'
+line:60 col:18 --(--LPAREN--
+token: line 60, column 18, sym: 19
+line:60 col:19 --1--INTEGER_LITERAL--
+token: line 60, column 19, sym: 93, value: '1'
+line:60 col:20 --)--RPAREN--
+token: line 60, column 20, sym: 20
+line:60 col:21 --;--SEMICOLON--
+token: line 60, column 21, sym: 13
+line:61 col:5 --}--RBRACE--
+token: line 61, column 5, sym: 17
+line:63 col:4 --}--RBRACE--
+token: line 63, column 4, sym: 17
+line:65 col:4 --for--FOR--
+token: line 65, column 4, sym: 49
+line:65 col:8 --(--LPAREN--
+token: line 65, column 8, sym: 19
+line:65 col:9 --String--IDENTIFIER--
+token: line 65, column 9, sym: 98, value: 'String'
+line:65 col:16 --ext--IDENTIFIER--
+token: line 65, column 16, sym: 98, value: 'ext'
+line:65 col:20 --:--COLON--
+token: line 65, column 20, sym: 21
+line:65 col:22 --extensions--IDENTIFIER--
+token: line 65, column 22, sym: 98, value: 'extensions'
+line:65 col:32 --)--RPAREN--
+token: line 65, column 32, sym: 20
+line:65 col:34 --{--LBRACE--
+token: line 65, column 34, sym: 16
+line:67 col:5 --print--IDENTIFIER--
+token: line 67, column 5, sym: 98, value: 'print'
+line:67 col:10 --(--LPAREN--
+token: line 67, column 10, sym: 19
+line:67 col:11 --ext--IDENTIFIER--
+token: line 67, column 11, sym: 98, value: 'ext'
+line:67 col:15 --+--PLUS--
+token: line 67, column 15, sym: 60
+line:67 col:19 --"--STRING_LITERAL--
+token: line 67, column 19, sym: 97, value: ':'
+line:67 col:21 --+--PLUS--
+token: line 67, column 21, sym: 60
+line:67 col:23 --extCount--IDENTIFIER--
+token: line 67, column 23, sym: 98, value: 'extCount'
+line:67 col:31 --.--DOT--
+token: line 67, column 31, sym: 12
+line:67 col:32 --get--IDENTIFIER--
+token: line 67, column 32, sym: 98, value: 'get'
+line:67 col:35 --(--LPAREN--
+token: line 67, column 35, sym: 19
+line:67 col:36 --extensions--IDENTIFIER--
+token: line 67, column 36, sym: 98, value: 'extensions'
+line:67 col:46 --.--DOT--
+token: line 67, column 46, sym: 12
+line:67 col:47 --indexOf--IDENTIFIER--
+token: line 67, column 47, sym: 98, value: 'indexOf'
+line:67 col:54 --(--LPAREN--
+token: line 67, column 54, sym: 19
+line:67 col:55 --ext--IDENTIFIER--
+token: line 67, column 55, sym: 98, value: 'ext'
+line:67 col:58 --)--RPAREN--
+token: line 67, column 58, sym: 20
+line:67 col:59 --)--RPAREN--
+token: line 67, column 59, sym: 20
+line:67 col:60 --)--RPAREN--
+token: line 67, column 60, sym: 20
+line:67 col:61 --;--SEMICOLON--
+token: line 67, column 61, sym: 13
+line:69 col:4 --}--RBRACE--
+token: line 69, column 4, sym: 17
+line:71 col:3 --}--RBRACE--
+token: line 71, column 3, sym: 17
+line:73 col:3 --print--IDENTIFIER--
+token: line 73, column 3, sym: 98, value: 'print'
+line:73 col:8 --(--LPAREN--
+token: line 73, column 8, sym: 19
+line:73 col:34 --"--STRING_LITERAL--
+token: line 73, column 34, sym: 97, value: 'No matching files found.'
+line:73 col:35 --)--RPAREN--
+token: line 73, column 35, sym: 20
+line:73 col:36 --;--SEMICOLON--
+token: line 73, column 36, sym: 13
+line:75 col:2 --}--RBRACE--
+token: line 75, column 2, sym: 17
 line:76 col:1 --}--RBRACE--
 token: line 76, column 1, sym: 17
-line:78 col:1 --}--RBRACE--
-token: line 78, column 1, sym: 17
-line:80 col:1 --for--FOR--
-token: line 80, column 1, sym: 49
-line:80 col:4 --(--LPAREN--
-token: line 80, column 4, sym: 19
-line:80 col:5 --String--IDENTIFIER--
-token: line 80, column 5, sym: 98, value: 'String'
-line:80 col:12 --ext--IDENTIFIER--
-token: line 80, column 12, sym: 98, value: 'ext'
-line:80 col:15 --:--COLON--
-token: line 80, column 15, sym: 21
-line:80 col:16 --extensions--IDENTIFIER--
-token: line 80, column 16, sym: 98, value: 'extensions'
-line:80 col:26 --)--RPAREN--
-token: line 80, column 26, sym: 20
-line:80 col:27 --{--LBRACE--
-token: line 80, column 27, sym: 16
-line:82 col:1 --print--IDENTIFIER--
-token: line 82, column 1, sym: 98, value: 'print'
-line:82 col:6 --(--LPAREN--
-token: line 82, column 6, sym: 19
-line:82 col:7 --ext--IDENTIFIER--
-token: line 82, column 7, sym: 98, value: 'ext'
-line:82 col:10 --+--PLUS--
-token: line 82, column 10, sym: 60
-line:82 col:13 --"--STRING_LITERAL--
-token: line 82, column 13, sym: 97, value: ':'
-line:82 col:14 --+--PLUS--
-token: line 82, column 14, sym: 60
-line:82 col:15 --extCount--IDENTIFIER--
-token: line 82, column 15, sym: 98, value: 'extCount'
-line:82 col:23 --.--DOT--
-token: line 82, column 23, sym: 12
-line:82 col:24 --get--IDENTIFIER--
-token: line 82, column 24, sym: 98, value: 'get'
-line:82 col:27 --(--LPAREN--
-token: line 82, column 27, sym: 19
-line:82 col:28 --extensions--IDENTIFIER--
-token: line 82, column 28, sym: 98, value: 'extensions'
-line:82 col:38 --.--DOT--
-token: line 82, column 38, sym: 12
-line:82 col:39 --getIndex--IDENTIFIER--
-token: line 82, column 39, sym: 98, value: 'getIndex'
-line:82 col:47 --(--LPAREN--
-token: line 82, column 47, sym: 19
-line:82 col:48 --ext--IDENTIFIER--
-token: line 82, column 48, sym: 98, value: 'ext'
-line:82 col:51 --)--RPAREN--
-token: line 82, column 51, sym: 20
-line:82 col:52 --)--RPAREN--
-token: line 82, column 52, sym: 20
-line:82 col:53 --)--RPAREN--
-token: line 82, column 53, sym: 20
-line:82 col:54 --;--SEMICOLON--
-token: line 82, column 54, sym: 13
-line:84 col:1 --}--RBRACE--
-token: line 84, column 1, sym: 17
-line:86 col:1 --}--RBRACE--
-token: line 86, column 1, sym: 17
-line:88 col:1 --print--IDENTIFIER--
-token: line 88, column 1, sym: 98, value: 'print'
-line:88 col:6 --(--LPAREN--
-token: line 88, column 6, sym: 19
-line:88 col:32 --"--STRING_LITERAL--
-token: line 88, column 32, sym: 97, value: 'No matching files found.'
-line:88 col:33 --)--RPAREN--
-token: line 88, column 33, sym: 20
-line:88 col:34 --;--SEMICOLON--
-token: line 88, column 34, sym: 13
-line:90 col:1 --}--RBRACE--
-token: line 90, column 1, sym: 17
-line:91 col:1 --}--RBRACE--
-token: line 91, column 1, sym: 17
-line:92 col:1 ----EOF--
-token: line 92, column 1, sym: 0
+line:77 col:1 ----EOF--
+token: line 77, column 1, sym: 0
 No errors.
