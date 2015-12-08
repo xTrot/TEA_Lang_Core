@@ -1,8 +1,13 @@
 package lib_TEA;
 
 //Immutable Path Class for TEA.
+/**
+ * @author Enrique
+ *
+ */
 public class Path {
 	private String path;
+	
 	
 	public Path(String path) {
 		//TODO Check if Path is valid!!
@@ -15,6 +20,11 @@ public class Path {
 		
 	}
 	
+	/**
+	 * @author 
+	 * @return Returns true if it is an absolute path.
+	 * This method verifies if it is an absolute path.
+	 */
 	public boolean isAbsolute() {
 		return false;
 	}
