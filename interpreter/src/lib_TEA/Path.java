@@ -1,5 +1,6 @@
 package lib_TEA;
 
+import java.io.File;
 import java.util.ArrayList;
 
 //Immutable Path Class for TEA.
@@ -68,7 +69,9 @@ public class Path {
 	 * @return		TRUE if Path is an absolute path that exist on disk.
 	 */
 	public boolean exists() {
-		return false;
+		
+		File temp = new File(this.path);
+		return temp.exists();
 	}
 	
 	public String get(int index) {
@@ -103,6 +106,7 @@ public class Path {
 	 */
 	public boolean create() {
 		
+		
 		return false;
 	}
 	
@@ -118,9 +122,28 @@ public class Path {
 	 * @return					Resulting path.
 	 */
 	// If parameter is an absolute Path, there must be an error
+	// 
 	public Path concat(Path relativePath) {
 		
-		return null;
+		Path result;
+		
+		if(relativePath.isAbsolute())
+		{
+			result = null;
+		}
+		else
+		{
+			String resultPath = null;
+			
+			if(!this.path.endsWith("/"))
+				this.path += "/";
+			
+			resultPath = this.path + relativePath.toString();
+			
+			result = new Path(resultPath);
+		}
+		
+		return result;
 	}
 	
 	public boolean remove() {
@@ -137,8 +160,7 @@ public class Path {
 	}
 	
 	private int length() {
-		// TODO Auto-generated method stub
-		return 0;
+		return this.lenght;
 	}
 
 	public Path select(int start, int end)
@@ -158,13 +180,14 @@ public class Path {
 		return new Path(newPath);
 	}
 	
-	public boolean isFile()
+	public boolean isDirectoriy()
 	{
-		return false;
+		File temp = new File(this.path);
+		return temp.isDirectory();
 	}
 
 	public String getExtension() {
-		// TODO Auto-generated method stub
+
 		return null;
 	}
 }
