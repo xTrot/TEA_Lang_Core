@@ -1,5 +1,8 @@
 package lib_TEA;
 
+import java.io.File;
+import java.util.ArrayList;
+
 //Immutable Path Class for TEA.
 /**
  * <h1>Path</h1>
@@ -8,23 +11,40 @@ package lib_TEA;
  * 
  * TEA Development Team
  * @author Enddy Y. Gonzales Figueroa
- * @author Jonathan A. Román Morell
+ * @author Jonathan A. Romï¿½n Morell
  * @author Enrique J. Vargas Figueroa
  *
  */
 public class Path {
+	
 	private String path;
+	private ArrayList<String> elements;
+	private boolean isAbsolute;
+	private int lenght;
 	
 	
 	public Path(String path) {
 		//TODO Check if Path is valid!!
+		
 		this.path = path;
+		this.elements = new ArrayList<String>();
+		this.isAbsolute = (this.path.charAt(0) == '/');
+		
+		String[] directories = this.path.split("/");
+		
+		for(int i = 0; i < directories.length; i++)
+		{
+			if(!(directories[i] == ""))
+				this.elements.add(directories[i]);
+		}
+		
+		this.lenght = this.elements.size();
+
 	}
 	
 	@Override
 	public String toString() {
 		return path;
-		
 	}
 	
 	/**
@@ -33,8 +53,7 @@ public class Path {
 	 * @return		TRUE if Path is an absolute path.
 	 */
 	public boolean isAbsolute() {
-	
-		return false;
+		return isAbsolute;
 	}
 	
 	/**
@@ -50,11 +69,23 @@ public class Path {
 	 * @return		TRUE if Path is an absolute path that exist on disk.
 	 */
 	public boolean exists() {
-		return false;
+		
+		File temp = new File(this.path);
+		return temp.exists();
 	}
 	
-	public String get() {
-		return null;
+	public String get(int index) {
+		
+		String result = null;
+		
+		if(Math.abs(index) > 0 && Math.abs(index) < lenght)
+		{
+			if(index < 0)
+				result = this.elements.get(this.length() + index);
+			else
+				result = this.elements.get(index);
+		}
+		return result;
 	}
 	
 	/**
@@ -77,6 +108,7 @@ public class Path {
 	 */
 	public boolean create() {
 		
+		
 		return false;
 	}
 	
@@ -92,9 +124,28 @@ public class Path {
 	 * @return					Resulting path.
 	 */
 	// If parameter is an absolute Path, there must be an error
+	// 
 	public Path concat(Path relativePath) {
 		
-		return null;
+		Path result;
+		
+		if(relativePath.isAbsolute())
+		{
+			result = null;
+		}
+		else
+		{
+			String resultPath = null;
+			
+			if(!this.path.endsWith("/"))
+				this.path += "/";
+			
+			resultPath = this.path + relativePath.toString();
+			
+			result = new Path(resultPath);
+		}
+		
+		return result;
 	}
 	
 	public boolean remove() {
@@ -103,16 +154,42 @@ public class Path {
 	
 	public Path select(int index)
 	{
-		return null;
+		if(index < 0)
+		{
+			this.select(this.length() + index, this.length());
+		}
+		return this.select(0, index);
 	}
 	
+	private int length() {
+		return this.lenght;
+	}
+
 	public Path select(int start, int end)
 	{
-		return null;
+		String newPath = "";
+		
+		
+		if(this.isAbsolute() && start == 0){
+			newPath = "/";
+		}
+		
+		for(int i = start; i <= end; i++)
+		{
+			newPath += this.elements.get(i) + "/";
+		}
+		
+		return new Path(newPath);
+	}
+	
+	public boolean isDirectoriy()
+	{
+		File temp = new File(this.path);
+		return temp.isDirectory();
 	}
 
 	public String getExtension() {
-		// TODO Auto-generated method stub
+
 		return null;
 	}
 }
