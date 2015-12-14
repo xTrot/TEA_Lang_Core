@@ -2,8 +2,8 @@ package lib_TEA;
 
 //Immutable Path Class for TEA.
 /**
- * <h1>PATH</h1>
- * The <b>PATH</b> class includes all the methods to manage paths
+ * <h1>Path</h1>
+ * The <b>Path</b> class includes all the methods to manage paths
  * within the TEA language. 
  * 
  * TEA Development Team
@@ -71,7 +71,9 @@ public class Path {
 	 * Creates the appropriate file or folder specified by Path.
 	 * <p>
 	 * This function creates all folders that do not already exist in the
-	 * specified path. If a file or folder already exists at the specified location, the function returns an error instead of overwriting the existing file or folder.
+	 * specified path. If a file or folder already exists at the specified location,
+	 * the function returns an error instead of overwriting the existing file or
+	 * folder.
 	 */
 	public boolean create() {
 		
@@ -79,14 +81,14 @@ public class Path {
 	}
 	
 	/**
-	 * Creates a new path by appending a name or a relative path) to an existing
+	 * Creates a new path by appending a name or a relative path to an existing
 	 * (base) path.
 	 * 
 	 * @param	relativePath	name or relative path is the new path component 
 	 * 							to be appended to the base path. If relativePath
-	 * 							is empty or an invalid path, this function returns
-	 * 							NULL. If the base path is an empty path then
-	 * 							relativePath must be an absolute path.
+	 * 							is empty this function returns the base path. If
+	 *                          the base path is an empty path then relativePath
+	 *                          must be an absolute path.
 	 * @return					Resulting path.
 	 */
 	// If parameter is an absolute Path, there must be an error
