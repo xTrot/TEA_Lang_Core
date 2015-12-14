@@ -11,7 +11,7 @@ import java.util.ArrayList;
  * 
  * TEA Development Team
  * @author Enddy Y. Gonzales Figueroa
- * @author Jonathan A. Rom�n Morell
+ * @author Jonathan A. Roman Morell
  * @author Enrique J. Vargas Figueroa
  *
  */
@@ -54,7 +54,7 @@ public class Path {
 	/**
 	 * Returns TRUE if Path is an absolute path, FALSE otherwise.
 	 * 
-	 * @return		TRUE if Path is an absolute path.
+	 * @return		TRUE if Path is an absolute path, FALSE otherwise
 	 */
 	public boolean isAbsolute() {
 		return isAbsolute;
@@ -70,7 +70,7 @@ public class Path {
 	 * <li>(Linux) the empty path refers to the root directory.
 	 * </ul>
 	 * 
-	 * @return		TRUE if Path is an absolute path that exist on disk.
+	 * @return		TRUE if Path is an absolute path that exist on disk, FALSE otherwise
 	 */
 	public boolean exists() {
 		
@@ -110,9 +110,10 @@ public class Path {
 	}
 	
 	/**
+	 * Returns the name of a File. Path must be absolute, the last element must be
+	 * a file name and the file must exist, otherwise returns null.
 	 * 
-	 * 
-	 * @return		
+	 * @return		Name of File including extension or null if file does not exist.
 	 */
 	public String getFileName() {
 		
@@ -181,11 +182,10 @@ public class Path {
 	 * 
 	 * @param	relativePath	name or relative path is the new path component 
 	 * 							to be appended to the base path. If relativePath
-	 * 							is empty this function returns the base path.
+	 * 							is empty this function returns the base path. If
+	 * 							relativePath is absolute this function returns null.
 	 * @return					Resulting path.
-	 */
-	// If parameter is an absolute Path, there must be an error
-	// 
+	 */ 
 	public Path concat(Path relativePath) {
 		
 		Path result;
@@ -209,9 +209,9 @@ public class Path {
 	}
 	
 	/**
-	 * Removes the last element from Path.
+	 * Deletes the directory or file in Path. Path must be absolute.
 	 * 
-	 * @return		TRUE if succesful, FALSE otherwise.
+	 * @return		TRUE if successful, FALSE otherwise.
 	 */
 	public boolean remove() {
 		
@@ -227,6 +227,15 @@ public class Path {
 		return false;
 	}
 	
+	/**
+	 * Returns a subset of Path starting from an end point. If index >= 0, returns
+	 * index elements starting from the first element. If index < 0, it returns
+	 * index elements starting from the last element.
+	 * 
+	 * @param index	
+	 * @return		Subset of Path
+	 * @see select(int start, int end)
+	 */
 	public Path select(int index)
 	{
 		if(index < 0)
@@ -239,9 +248,9 @@ public class Path {
 	/**
 	 * Returns the number of elements in Path. For example:
 	 * 
-	 * dirA/dirB/dirC/
+	 * Path path1 = dirA/dirB/dirC/file.name
 	 * 
-	 * has 3 elements.
+	 * Calling path1.length() returns 3.
 	 * 
 	 * @return		Number of elements in Path.
 	 */
@@ -249,6 +258,16 @@ public class Path {
 		return this.lenght;
 	}
 
+	/**
+	 * Returns a subset of Path. start and end are the indexes of the beginning and
+	 * finish of the subset, respectively. start must be less than end
+	 * (start < end) otherwise the function returns null.
+	 * 
+	 * @param start	beginning of subset of Path 
+	 * @param end	finish of subset of Path
+	 * @return		subset of Path; null if subset cannot be obtained.
+	 * @see	select(int index)
+	 */
 	public Path select(int start, int end)
 	{
 		String newPath = "";
@@ -280,9 +299,10 @@ public class Path {
 	}
 
 	/**
-	 * Returns the extension of the last element in Path, if exist.
+	 * Returns the extension of the last element in Path, if it exist.
 	 * 
-	 * @return		extension of the last element in Path, if exist; null otherwise
+	 * @return		extension of the last element in Path, if it exist;
+	 * 				null otherwise
 	 */
 	public String getExtension() {
 
