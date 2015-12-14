@@ -22,7 +22,11 @@ public class Path {
 	private boolean isAbsolute;
 	private int lenght;
 	
-	
+	/**
+	 * Creates Path object.
+	 * 
+	 * @param path	Path 
+	 */
 	public Path(String path) {
 		//TODO Check if Path is valid!!
 		
@@ -74,6 +78,23 @@ public class Path {
 		return temp.exists();
 	}
 	
+	/**
+	 * Returns the element (directory or file) of the Path at index. For example,
+	 * if:
+	 * 
+	 * Path path1 = dirA/dirB/dirC/file.name
+	 * 
+	 * Calling path1.get(2) returns dirB
+	 * 
+	 * index can be negative. In such case get function start counting from the
+	 * right.
+	 * 
+	 * @param index	index of the element in Path to get. If index is out of range
+	 * 				(>=|N|, where N is the number of elements in Path), the function
+	 * 				returns null. index can be negative; in this case the function
+	 * 				starts counting from the right.
+	 * @return		Element in Path at index. null if not found.
+	 */
 	public String get(int index) {
 		
 		String result = null;
@@ -99,12 +120,13 @@ public class Path {
 	}
 	
 	/**
-	 * Creates the appropriate file or folder specified by Path.
+	 * Creates the appropriate directory specified by Path. Path must be absolute.
 	 * <p>
-	 * This function creates all folders that do not already exist in the
-	 * specified path. If a file or folder already exists at the specified location,
-	 * the function returns an error instead of overwriting the existing file or
-	 * folder.
+	 * This function creates all the directories that do not already exist in the
+	 * specified path. If the directory already exist at the specified location,
+	 * the function returns Path without overwriting the existing directory.
+	 * 
+	 * @return		TRUE if directory is created or already exist. FALSE otherwise
 	 */
 	public boolean create() {
 		
@@ -118,9 +140,7 @@ public class Path {
 	 * 
 	 * @param	relativePath	name or relative path is the new path component 
 	 * 							to be appended to the base path. If relativePath
-	 * 							is empty this function returns the base path. If
-	 *                          the base path is an empty path then relativePath
-	 *                          must be an absolute path.
+	 * 							is empty this function returns the base path.
 	 * @return					Resulting path.
 	 */
 	// If parameter is an absolute Path, there must be an error
@@ -148,6 +168,11 @@ public class Path {
 		return result;
 	}
 	
+	/**
+	 * Removes the last element from Path.
+	 * 
+	 * @return		TRUE if succesful, FALSE otherwise.
+	 */
 	public boolean remove() {
 		return false;
 	}
@@ -161,6 +186,15 @@ public class Path {
 		return this.select(0, index);
 	}
 	
+	/**
+	 * Returns the number of elements in Path. For example:
+	 * 
+	 * dirA/dirB/dirC/
+	 * 
+	 * has 3 elements.
+	 * 
+	 * @return		Number of elements in Path.
+	 */
 	private int length() {
 		return this.lenght;
 	}
@@ -182,12 +216,22 @@ public class Path {
 		return new Path(newPath);
 	}
 	
-	public boolean isDirectoriy()
+	/**
+	 * Return TRUE if Path is an existing directory. Path must be absolute.
+	 * 
+	 * @return		TRUE if Path is an existing directory, FALSE otherwise.
+	 */
+	public boolean isDirectory()
 	{
 		File temp = new File(this.path);
 		return temp.isDirectory();
 	}
 
+	/**
+	 * Returns the extension of the last element in Path, if exist.
+	 * 
+	 * @return		extension of the last element in Path, if exist; null otherwise
+	 */
 	public String getExtension() {
 
 		return null;
