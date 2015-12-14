@@ -1,6 +1,5 @@
 package testers;
 
-import java.io.File;
 import java.util.ArrayList;
 
 import lib_TEA.*;
@@ -14,9 +13,6 @@ public class MainTerminalTester {
 		for(String s:responce1){
 			System.out.println(s);
 		}
-		
-		File file = new File("/home/jonathan/Desktop/folder/file");
-		System.out.println(file.getName());
 	}
 	
 }

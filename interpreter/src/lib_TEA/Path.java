@@ -95,7 +95,12 @@ public class Path {
 	 */
 	public String getFileName() {
 		
-		return null;
+		String result = null;
+		
+		if(this.exists() && !this.isDirectory())
+			result = this.get(this.lenght - 1);
+		
+		return result;
 	}
 	
 	/**
@@ -104,10 +109,46 @@ public class Path {
 	 * This function creates all folders that do not already exist in the
 	 * specified path. If a file or folder already exists at the specified location, the function returns an error instead of overwriting the existing file or folder.
 	 */
-	public boolean create() {
+	public boolean create(boolean isFile) {
+		
+		boolean result = false;
+		
+		MainTerminal terminal = MainTerminal.get();
 		
 		
-		return false;
+		if(!isFile)
+		{
+			String path = "/";
+			
+			for(String s : this.elements)
+			{
+				path += s + "/";
+
+				if(!this.exists())
+					terminal.execute("mkdir " + path);
+			}
+			
+			result = true;
+		}
+		
+		else
+		{
+			String path = "/";
+			
+			for(int i = 0; i <= this.lenght - 2; i++)
+			{
+				path += this.elements.get(i) + "/";
+
+				if(!this.exists())
+					terminal.execute("mkdir " + path);
+			}
+			
+			terminal.execute("touch " + path + this.elements.get(this.lenght - 1));
+			
+			result = true;
+		}
+
+		return result;
 	}
 	
 	/**
@@ -142,11 +183,20 @@ public class Path {
 			
 			result = new Path(resultPath);
 		}
-		
 		return result;
 	}
 	
 	public boolean remove() {
+		
+		MainTerminal terminal = MainTerminal.get();
+		
+		if(this.exists())
+		{
+			if(this.isDirectory())
+				terminal.execute("rmdir " + this.path);
+			else
+				terminal.execute("rm --force " + path);
+		}
 		return false;
 	}
 	
@@ -180,7 +230,7 @@ public class Path {
 		return new Path(newPath);
 	}
 	
-	public boolean isDirectoriy()
+	public boolean isDirectory()
 	{
 		File temp = new File(this.path);
 		return temp.isDirectory();
