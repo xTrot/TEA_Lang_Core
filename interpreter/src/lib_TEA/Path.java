@@ -1,6 +1,8 @@
 package lib_TEA;
 
 import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
 import java.util.ArrayList;
 
 //Immutable Path Class for TEA.
@@ -305,7 +307,21 @@ public class Path {
 	 * 				null otherwise
 	 */
 	public String getExtension() {
+		
+		String result = null;
+		
+		if(this.get(this.lenght - 1).contains("."))
+		{
+			String temp  = this.get(this.lenght - 1);
+			
+			String[] parts = temp.split("\\.");
+			
+			result = parts[parts.length - 1];
+		}
+		else
+			result = "";
+		
 
-		return null;
+		return result;
 	}
 }
