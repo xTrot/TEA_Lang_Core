@@ -74,7 +74,7 @@ public class MainTerminal {
 	 * @param command	command to execute.
 	 * @return			response from Main Terminal after execution.
 	 */
-	public ArrayList<String> execute(String command){
+	public String execute(String command){
 		this.start(command);
 		this.waitForResponse();
 		return this.response();
@@ -86,14 +86,9 @@ public class MainTerminal {
 	 * 
 	 * @return response from Main Terminal.
 	 */
-	public ArrayList<String> response(){
+	public String response(){
 		InputStream inStream = this.currentProcess.getInputStream();
-		String line;
-		ArrayList<String> results = new ArrayList<String>() ;
-		while((line = nextLine(inStream))!=null){
-			results.add(line);
-		}
-		return results;
+		return nextLine(inStream);
 	}
 
 	/**
