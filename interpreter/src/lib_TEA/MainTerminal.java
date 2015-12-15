@@ -16,6 +16,11 @@ public class MainTerminal {
 		
 	}
 	
+	/**
+	 * Creates a singleton to a Main Terminal
+	 *  
+	 * @return		singleton to a Main Terminal
+	 */
 	public static MainTerminal get(){
 		
 		if(singleton==null){
@@ -26,6 +31,11 @@ public class MainTerminal {
 		
 	}
 
+	/**
+	 * Starts the Main Terminal
+	 * 
+	 * @param command	command to execute when starting the Main Terminal.
+	 */
 	public void start(String command){
 		try{
 			this.processBuilder = new ProcessBuilder(BASH,"-c",
@@ -37,6 +47,9 @@ public class MainTerminal {
 		}
 	}
 	
+	/**
+	 * Wait for a response from the Main Terminal.
+	 */
 	public void waitForResponse(){
 		if(this.currentProcess!=null)
 			try {
@@ -46,10 +59,21 @@ public class MainTerminal {
 			}
 	}
 
+	/**
+	 * Change the working directory of Main Terminal to dir
+	 * 
+	 * @param dir	working directory. Must be an absolute path.
+	 */
 	public void cd(Path dir) {
 		this.currentPath = new Path(dir.toString());
 	}
 
+	/**
+	 * Execute command on the Main Terminal.
+	 * 
+	 * @param command	command to execute.
+	 * @return			response from Main Terminal after execution.
+	 */
 	public ArrayList<String> execute(String command){
 		this.start(command);
 		this.waitForResponse();
@@ -57,6 +81,11 @@ public class MainTerminal {
 		
 	}
 
+	/**
+	 * 	Gather and returns the response from Main Terminal.
+	 * 
+	 * @return response from Main Terminal.
+	 */
 	public ArrayList<String> response(){
 		InputStream inStream = this.currentProcess.getInputStream();
 		String line;
@@ -67,6 +96,12 @@ public class MainTerminal {
 		return results;
 	}
 
+	/**
+	 * Read next line from input stream.
+	 * 
+	 * @param inStream
+	 * @return
+	 */
 	private String nextLine(InputStream inStream){
 		int i;
 		String line = "";

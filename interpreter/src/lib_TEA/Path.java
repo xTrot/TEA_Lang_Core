@@ -230,9 +230,9 @@ public class Path {
 	}
 	
 	/**
-	 * Returns a subset of Path starting from an end point. If index >= 0, returns
-	 * index elements starting from the first element. If index < 0, it returns
-	 * index elements starting from the last element.
+	 * Returns a subset of Path with index elements, starting from an end point.
+	 * If index >= 0, returns the first index elements. If index < 0, it returns
+	 * the last index elements.
 	 * 
 	 * @param index	
 	 * @return		Subset of Path
