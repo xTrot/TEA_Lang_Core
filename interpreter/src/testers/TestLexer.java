@@ -39,8 +39,10 @@ public class TestLexer {
 
 			Path[] files = new Path[fileNames.length];
 
-			for (int i = 0; i < fileNames.length; i++)
+			for (int i = 0; i < fileNames.length; i++){
 				files[i] = new Path(fileNames[i]);
+				System.out.println(files[i]);
+			}
 
 			ArrayList<String> extensions = new ArrayList<String>();
 
@@ -69,9 +71,11 @@ public class TestLexer {
 
 			}
 
-		}
+		} else {
 
 		System.out.println("No matching files found.");
+		
+		}
 
 	}
 }

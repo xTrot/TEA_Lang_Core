@@ -35,8 +35,9 @@ public class Path {
 		this.path = path;
 		this.elements = new ArrayList<String>();
 		this.isAbsolute = (this.path.charAt(0) == '/');
-		
-		String[] directories = this.path.split("/");
+		String[] directories = {path};
+		if(path.contains("/"))
+			directories = this.path.split("/");
 		
 		for(int i = 0; i < directories.length; i++)
 		{
@@ -101,7 +102,7 @@ public class Path {
 		
 		String result = null;
 		
-		if(Math.abs(index) > 0 && Math.abs(index) < lenght)
+		if(Math.abs(index) >= 0 && Math.abs(index) < lenght)
 		{
 			if(index < 0)
 				result = this.elements.get(this.length() + index);
@@ -310,7 +311,7 @@ public class Path {
 		
 		String result = null;
 		
-		if(this.get(this.lenght - 1).contains("."))
+		if(this.elements.get(this.lenght - 1).contains("."))
 		{
 			String temp  = this.get(this.lenght - 1);
 			
