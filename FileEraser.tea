@@ -1,0 +1,42 @@
+// This is the second sample code for the Tea language.  This example inspects a folder and deletes all the files in that folder with the .txt extension.
+
+public class test{
+
+void main(String[] args){
+
+//Native Path class object instance.
+
+Path directory = new Path("/home/jonathan/Desktop/folder");
+
+//Get the terminal and make a change of working directory.
+		
+mainTerm.cd(directory);
+
+//Execute the "ls" command to see all files on the directory and save them.
+		
+String response = MainTerminal.get().execute("ls");
+
+//Use the filter function to make a list of the files.
+		
+String[] files = Functions.filter(response, "((\\w)+\\.)+(\\w)+");
+
+//Make paths for all the files in the directory.
+		
+ArrayList<Path> paths = new ArrayList<Path>();
+
+for(String s: files)
+{
+	paths.add(new Path("/home/jonathan/Desktop/folder/" + s));
+}
+
+//Iterate through the paths list and delete the files with "txt" extension.
+		
+for(Path p: paths)
+{
+	if (p.getExtension().equals("txt"))
+		p.remove();
+}
+}
+
+}
+

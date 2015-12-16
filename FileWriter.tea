@@ -1,0 +1,33 @@
+// This is the third sample code for the Tea language. This creates a text file and writes a message to it.
+
+public class test{
+
+void main(String[] args){ 
+
+//Native Path class object instance. 
+
+Path path = new Path("/home/jonathan/Desktop/folder/file1.txt");
+		
+//Create the file and all the necessary parent folders.
+
+path.create(true);
+
+//Get the main terminal and make a change of working directory.
+		
+mainTerm.cd(new Path("../"));
+
+//Create the desired string message to be writed to the file.
+
+String text = "\"Whatever you want to write to the text file!!\"";
+
+//Elaborate the command to be passed to the main terminal as a String.
+		
+String command = "echo " + text + " > " +path;
+
+//Execute the command (Write to the file with the echo command).
+		
+mainTerm.execute(command);
+}
+
+}
+
