@@ -34,14 +34,13 @@ public class Path {
 		this.path = path;
 		this.elements = new ArrayList<String>();
 		this.isAbsolute = (this.path.charAt(0) == '/');
-		String[] directories = {path};
-		if(path.contains("/"))
-			directories = this.path.split("/");
 		
-		for(int i = 0; i < directories.length; i++)
+		String[] directories = this.path.split("/");
+		
+		for(String s: directories)
 		{
-			if(!(directories[i] == ""))
-				this.elements.add(directories[i]);
+			if(!s.equals(""))
+				this.elements.add(s);
 		}
 		
 		this.lenght = this.elements.size();
@@ -139,24 +138,42 @@ public class Path {
 	public boolean create(boolean isFile) {
 		
 		boolean result = false;
-				
-		File file = new File(this.path);
 		
-		if(isFile)
+		MainTerminal terminal = MainTerminal.get();
+
+		if(this.isAbsolute())
 		{
-			try {
-				file.createNewFile();
-			} catch (IOException e) {
-				e.printStackTrace();
+			if(!isFile)
+			{
+				File temp = new File(this.path);
+				temp.mkdirs();
+				result = true;
 			}
-			
-			result = true;
+
+			else
+			{
+				File temp = new File(this.path);
+				String folderContainingFile = "/";
+				
+				for(int i = 0; i <= this.lenght - 2; i++)
+				{
+					folderContainingFile += this.get(i) + "/";
+				}
+				
+				new File(folderContainingFile).mkdirs();
+				
+				try {
+					temp.createNewFile();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+				result = true;
+			}
 		}
 		else
 		{
-			file.mkdirs();
-			
-			result = true;
+			System.out.println("WARNING: Path not created. It only works for absolute paths.");
+			result = false;
 		}
 
 		return result;
@@ -294,7 +311,7 @@ public class Path {
 		
 		String result = null;
 		
-		if(this.elements.get(this.lenght - 1).contains("."))
+		if(this.get(this.lenght - 1).contains("."))
 		{
 			String temp  = this.get(this.lenght - 1);
 			

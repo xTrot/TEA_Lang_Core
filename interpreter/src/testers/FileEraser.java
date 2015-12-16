@@ -16,7 +16,6 @@ public class FileEraser {
 		
 		MainTerminal.get().cd(directory);
 		
-		
 		String response = MainTerminal.get().execute("ls");
 		
 		String[] files = Functions.filter(response, "((\\w)+\\.)+(\\w)+");
