@@ -2,7 +2,6 @@ package lib_TEA;
 
 import java.io.File;
 import java.io.IOException;
-import java.nio.file.Files;
 import java.util.ArrayList;
 
 //Immutable Path Class for TEA.
@@ -140,38 +139,22 @@ public class Path {
 	public boolean create(boolean isFile) {
 		
 		boolean result = false;
+				
+		File file = new File(this.path);
 		
-		MainTerminal terminal = MainTerminal.get();
-		
-		
-		if(!isFile)
+		if(isFile)
 		{
-			String path = "/";
-			
-			for(String s : this.elements)
-			{
-				path += s + "/";
-
-				if(!this.exists())
-					terminal.execute("mkdir " + path);
+			try {
+				file.createNewFile();
+			} catch (IOException e) {
+				e.printStackTrace();
 			}
 			
 			result = true;
 		}
-		
 		else
 		{
-			String path = "/";
-			
-			for(int i = 0; i <= this.lenght - 2; i++)
-			{
-				path += this.elements.get(i) + "/";
-
-				if(!this.exists())
-					terminal.execute("mkdir " + path);
-			}
-			
-			terminal.execute("touch " + path + this.elements.get(this.lenght - 1));
+			file.mkdirs();
 			
 			result = true;
 		}
