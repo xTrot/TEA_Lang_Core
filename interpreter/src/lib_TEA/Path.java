@@ -29,8 +29,6 @@ public class Path {
 	 * @param path	Path 
 	 */
 	public Path(String path) {
-		//TODO Check if Path is valid!!
-		
 		this.path = path;
 		this.elements = new ArrayList<String>();
 		this.isAbsolute = (this.path.charAt(0) == '/');
@@ -139,8 +137,6 @@ public class Path {
 		
 		boolean result = false;
 		
-		MainTerminal terminal = MainTerminal.get();
-
 		if(this.isAbsolute())
 		{
 			if(!isFile)

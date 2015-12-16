@@ -7,7 +7,6 @@ import java.util.regex.Pattern;
 public class Functions {
 
 	public static String[] filter(String response, String regEx) {
-		// TODO Auto-generated method stub
 		Pattern pattern = Pattern.compile(regEx);
 		Matcher matcher = null;
 		String[] lines = response.split("\n");
@@ -16,7 +15,6 @@ public class Functions {
 			matcher = pattern.matcher(line);
 			if(matcher.lookingAt()){
 				result.add(line);
-				System.out.println(line);
 			}
 		}
 		return result.toArray(new String[result.size()]);
