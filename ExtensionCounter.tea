@@ -1,4 +1,3 @@
-import lib_TEA.*
 import java.util.ArrayList;
 
 //Author Enddy Gonzalez Figueroa 
@@ -9,30 +8,25 @@ import java.util.ArrayList;
 // exception. 
 // 
 // This is the first sample code for the Tea language. 
-public class test {
+public class ExtensionCounter {
 
-	void main(String[] args) {
+	public static void main(String[] args) {
 
 		// Native Path class object instance.
 		Path dir = new Path(args[0]);
 		
-		// Native terminal start. Starts a new terminal communication.
-		MainTerminal.get().start();
-
 		// Simplified terminal command cd(Change Directory).
-		MainTerminal.get().cd(dir);
+		mainTerm.cd(dir);
 
 		// Simple execution with a string argument. The execute
 		// waits for the terminal to finish the execution.
-		MainTerminal.get().execute("ls");
-
 		// The response can be accessed.
-		String response = MainTerminal.get().response();
+		String response = mainTerm.execute("ls");
 
 		// The Functions.filter method is able to use RegEx to find all
 		// the matching Strings
 		// This will match all files with extensions only.
-		String[] fileNames = Functions.filter(response, "(\\w.)+\\w");
+		String[] fileNames = filter(response, "((\\w)+\\.)+(\\w)+");
 
 		// Counting process.
 		if (fileNames != null) {
@@ -50,10 +44,10 @@ public class test {
 
 				String ext = file.getExtension();
 
-				ext = ext.lowerCase();
+				ext = ext.toLowerCase();
 
 				if (extensions.contains(ext)){
-					int i = extentions.indexOf(ext);
+					int i = extensions.indexOf(ext);
 					extCount.set(i, extCount.get(i) + 1);
 				}
 				else {
@@ -65,13 +59,15 @@ public class test {
 
 			for (String ext : extensions) {
 
-				System.out.println(ext + ":" + extCount.get(extensions.indexOf(ext)));
+				print(ext + ":" + extCount.get(extensions.indexOf(ext)));
 
 			}
 
-		}
+		}else{
 
-		System.out.println("No matching files found.");
+		print("No matching files found.");
+		
+		}
 
 	}
 }

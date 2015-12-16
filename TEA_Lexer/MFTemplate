@@ -1,31 +1,24 @@
-# You need CUP v0.10j (or newer) for this makefile to work (for java12.cup)
-#
-# CUP classes should be included in CLASSPATH 
-
 CUP        = java java_cup.Main -interface <
 JFLEX      = jflex
 CUPJAR     = java-cup-11b.jar
-CP         = .:$(CUPJAR)
+TEA        = lib_TEA.jar
+CP         = .:$(CUPJAR):$(TEA)
 JAVA       = java
 JAVAC      = javac
 JAVACFLAGS = -cp $(CP)
 CUP        = $(JAVA) -jar $(CUPJAR)
 
+all: run
 
-
-# --------------------------------------------------
-
-all: test
-
-test: lexer-output.txt
-#	@(diff lexer-output.txt lexer-output.good && echo "Test OK!") || echo "Test failed!"
+run: lexer-output.txt
+	$(JAVA) -cp $(CP) $(FILE_COMP) $(ARGS)
 
 lexer-output.txt: compile
-	$(JAVA) -cp $(CP) TestLexer TestLexer.java > lexer-output.txt
+	$(JAVA) -cp $(CP) Scanner $(FILE) > lexer-output.txt
 
 
 compile: scanner parser unicode
-	$(JAVAC) $(JAVACFLAGS) JavaParser.java
+	$(JAVAC) $(JAVACFLAGS) JavaParser.java $(FILE)
 
 parser: parser.java 
 
