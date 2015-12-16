@@ -1,6 +1,7 @@
 package lib_TEA;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 
 //Immutable Path Class for TEA.
@@ -28,19 +29,16 @@ public class Path {
 	 * @param path	Path 
 	 */
 	public Path(String path) {
-		//TODO Check if Path is valid!!
-		
 		this.path = path;
 		this.elements = new ArrayList<String>();
 		this.isAbsolute = (this.path.charAt(0) == '/');
-		String[] directories = {path};
-		if(path.contains("/"))
-			directories = this.path.split("/");
 		
-		for(int i = 0; i < directories.length; i++)
+		String[] directories = this.path.split("/");
+		
+		for(String s: directories)
 		{
-			if(!(directories[i] == ""))
-				this.elements.add(directories[i]);
+			if(!s.equals(""))
+				this.elements.add(s);
 		}
 		
 		this.lenght = this.elements.size();
@@ -139,39 +137,39 @@ public class Path {
 		
 		boolean result = false;
 		
-		MainTerminal terminal = MainTerminal.get();
-		
-		
-		if(!isFile)
+		if(this.isAbsolute())
 		{
-			String path = "/";
-			
-			for(String s : this.elements)
+			if(!isFile)
 			{
-				path += s + "/";
-
-				if(!this.exists())
-					terminal.execute("mkdir " + path);
+				File temp = new File(this.path);
+				temp.mkdirs();
+				result = true;
 			}
-			
-			result = true;
+
+			else
+			{
+				File temp = new File(this.path);
+				String folderContainingFile = "/";
+				
+				for(int i = 0; i <= this.lenght - 2; i++)
+				{
+					folderContainingFile += this.get(i) + "/";
+				}
+				
+				new File(folderContainingFile).mkdirs();
+				
+				try {
+					temp.createNewFile();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+				result = true;
+			}
 		}
-		
 		else
 		{
-			String path = "/";
-			
-			for(int i = 0; i <= this.lenght - 2; i++)
-			{
-				path += this.elements.get(i) + "/";
-
-				if(!this.exists())
-					terminal.execute("mkdir " + path);
-			}
-			
-			terminal.execute("touch " + path + this.elements.get(this.lenght - 1));
-			
-			result = true;
+			System.out.println("WARNING: Path not created. It only works for absolute paths.");
+			result = false;
 		}
 
 		return result;
@@ -309,7 +307,7 @@ public class Path {
 		
 		String result = null;
 		
-		if(this.elements.get(this.lenght - 1).contains("."))
+		if(this.get(this.lenght - 1).contains("."))
 		{
 			String temp  = this.get(this.lenght - 1);
 			

@@ -11,6 +11,9 @@ public class MainTerminalTester {
 		String responce1 = mainTerm.execute("mkdir " + new Path("wepa")+"\nls");
 		System.out.println(responce1);
 		
+		Path p = new Path("/home/jonathan/Desktop/folder/");
+		
+		p.create(false);
 		
 	}
 	
