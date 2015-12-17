@@ -137,41 +137,33 @@ public class Path {
 		
 		boolean result = false;
 		
-		if(this.isAbsolute())
+		if(!isFile)
 		{
-			if(!isFile)
-			{
-				File temp = new File(this.path);
-				temp.mkdirs();
-				result = true;
-			}
-
-			else
-			{
-				File temp = new File(this.path);
-				String folderContainingFile = "/";
-				
-				for(int i = 0; i <= this.lenght - 2; i++)
-				{
-					folderContainingFile += this.get(i) + "/";
-				}
-				
-				new File(folderContainingFile).mkdirs();
-				
-				try {
-					temp.createNewFile();
-				} catch (IOException e) {
-					e.printStackTrace();
-				}
-				result = true;
-			}
+			File temp = new File(this.path);
+			temp.mkdirs();
+			result = true;
 		}
+
 		else
 		{
-			System.out.println("WARNING: Path not created. It only works for absolute paths.");
-			result = false;
+			File temp = new File(this.path);
+			String folderContainingFile = "/";
+			
+			for(int i = 0; i <= this.lenght - 2; i++)
+			{
+				folderContainingFile += this.get(i) + "/";
+			}
+			
+			new File(folderContainingFile).mkdirs();
+			
+			try {
+				temp.createNewFile();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+			result = true;
 		}
-
+		
 		return result;
 	}
 	
@@ -215,7 +207,6 @@ public class Path {
 	public boolean remove() {
 		
 		MainTerminal terminal = MainTerminal.get();
-		
 		if(this.exists())
 		{
 			if(this.isDirectory())
@@ -223,6 +214,7 @@ public class Path {
 			else
 				terminal.execute("rm --force " + path);
 		}
+		
 		return false;
 	}
 	

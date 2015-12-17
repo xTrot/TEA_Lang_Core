@@ -1,12 +1,5 @@
-package testers;
-
+import lib_TEA.*;
 import java.util.ArrayList;
-
-import lib_TEA.Functions;
-import lib_TEA.MainTerminal;
-import lib_TEA.Path;
-
-
 
 public class FileEraser {
 
@@ -24,10 +17,13 @@ public class FileEraser {
 			paths.add(new Path(s));
 		}
 		
+		System.out.println("Removing:");
 		for(Path p: paths)
 		{
-			if (p.getExtension().equals("txt"))
+			if (p.getExtension().equals("txt")){
+				System.out.println(p.toString());
 				p.remove();
+				}
 		}
 	}
 

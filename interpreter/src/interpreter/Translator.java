@@ -39,7 +39,7 @@ public class Translator {
 		
 		MainTerminal mainTerm = MainTerminal.get();
 		
-		mainTerm.cd(new Path(ROOT + "TEA_Lexer/"));
+		mainTerm.cd(new Path(ROOT + "TEA_Lang_Core/TEA_Lexer/"));
 		
 		fixMakeFile(tea);
 		
@@ -48,7 +48,8 @@ public class Translator {
 		String response = mainTerm.execute("make");
 		
 		System.out.println(response);
-		makeErrorLookup(response);
+		if(makeErrorLookup(response))
+			return;
 		
 		if(!CheckParserSuccess.check(LEXER_OUT)){
 			System.out.println("lexer-output.txt is missing or the syntax is incorrect.");
@@ -58,14 +59,14 @@ public class Translator {
 		Path javaClass = new Path(ROOT+"TEA_Lexer/"+java.getFileName().split("\\.")[0]+".class");
 		copyFile(java,fileRoot);
 		copyFile(javaClass,fileRoot);
-		java.remove();
-		javaClass.remove();
-		MAKEFILE.remove();
-		LEXER_OUT.remove();
+		mainTerm.execute("rm --force "+java.getFileName());
+		mainTerm.execute("rm --force "+javaClass.getFileName());
+		mainTerm.execute("rm --force "+MAKEFILE.getFileName());
+		mainTerm.execute("rm --force "+LEXER_OUT.getFileName());
 		
 	}
 	
-	private static void makeErrorLookup(String response) {
+	private static boolean makeErrorLookup(String response) {
 		if(response.contains("recipe for target 'compile' failed")){
 			System.out.println("Syntax errors within target TEA File.");
 			String command = "gnome-terminal -x sh -c "
@@ -75,13 +76,14 @@ public class Translator {
 					+ " ; read -p 'Press Enter to continue...' continue\" & disown";
 			MainTerminal.get().execute(command);
 			System.out.println(command);
-			return;
+			return true;
 		}
 		if(response.contains("recipe for target 'run' failed")){
 			System.out.println("Run of the compiled file failed.\n"
 					+ "Commonly happens due to wrong arguments.");
-			return;
+			return true;
 		}
+		return false;
 	}
 
 	private static void copyFile(Path file, Path directory) {

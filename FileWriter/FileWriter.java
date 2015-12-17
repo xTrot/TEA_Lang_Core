@@ -1,7 +1,4 @@
-package testers;
-
-import lib_TEA.MainTerminal;
-import lib_TEA.Path;
+import lib_TEA.*;
 
 public class FileWriter {
 
@@ -10,8 +7,6 @@ public class FileWriter {
 		Path path = new Path("exampleFile1.txt");
 		
 		path.create(true);
-		
-		MainTerminal.get().cd(new Path("../"));
 		
 		String text = "\"Whatever you want to write to the text file!!\"";
 		

@@ -7,12 +7,13 @@ import java.io.InputStream;
 public class MainTerminal {
 	private static final String BASH = "/bin/bash";
 	private static MainTerminal singleton;
+	private static Path	BASEPATH = new Path("../");
 	private ProcessBuilder processBuilder;
 	private Process currentProcess;
 	private Path currentPath;
 	
 	private MainTerminal(){
-		
+		this.currentPath = BASEPATH;
 	}
 	
 	/**
@@ -64,7 +65,11 @@ public class MainTerminal {
 	 * @param dir	working directory. Must be an absolute path.
 	 */
 	public void cd(Path dir) {
-		this.currentPath = new Path(dir.toString());
+		if(dir.isAbsolute())
+			this.currentPath = new Path(dir.toString());
+		else
+			this.currentPath = this.currentPath.concat(
+					new Path(dir.toString()));
 	}
 
 	/**
