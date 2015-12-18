@@ -10,6 +10,5 @@ Our motivation was the difficulties presented when communicating with the Main T
 Our approach was to follow the JAVA programming style. Strictly speaking, currently TEA looks like a library for JAVA than a programming language. You can write code in TEA and the TEA translator convert the code into JAVA code.
 
 * [TEA Overview & Tutorial](https://docs.google.com/a/upr.edu/document/d/1_t_hck1C5Hde5yFHHVj8pMKImNRoB4vDbA8avI2_WQk/edit?usp=sharing)
-* TEA Documentation
 * [Introductory Video](https://youtu.be/bdJGJCtv2BA)
-* [Source code](https://github.com/xTrot/TEA_Lang_Core.git)
+*  [TEA Source code and Documentation](https://github.com/xTrot/TEA_Lang_Core.git)
